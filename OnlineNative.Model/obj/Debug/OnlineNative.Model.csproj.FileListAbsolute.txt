@@ -1,0 +1,10 @@
+D:\yule\OnlineNative.Domain\OnlineNative.Model\bin\Debug\OnlineNative.Model.dll
+D:\yule\OnlineNative.Domain\OnlineNative.Model\bin\Debug\OnlineNative.Model.pdb
+D:\yule\OnlineNative.Domain\OnlineNative.Model\obj\Debug\OnlineNative.Model.csprojResolveAssemblyReference.cache
+D:\yule\OnlineNative.Domain\OnlineNative.Model\obj\Debug\OnlineNative.Model.dll
+D:\yule\OnlineNative.Domain\OnlineNative.Model\obj\Debug\OnlineNative.Model.pdb
+E:\yule\OnlineNative.Domain\OnlineNative.Model\bin\Debug\OnlineNative.Model.dll
+E:\yule\OnlineNative.Domain\OnlineNative.Model\bin\Debug\OnlineNative.Model.pdb
+E:\yule\OnlineNative.Domain\OnlineNative.Model\obj\Debug\OnlineNative.Model.csprojResolveAssemblyReference.cache
+E:\yule\OnlineNative.Domain\OnlineNative.Model\obj\Debug\OnlineNative.Model.dll
+E:\yule\OnlineNative.Domain\OnlineNative.Model\obj\Debug\OnlineNative.Model.pdb

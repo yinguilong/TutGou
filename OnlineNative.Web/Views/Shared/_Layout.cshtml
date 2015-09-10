@@ -1,0 +1,24 @@
+﻿@using System.Web.Optimization;
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>特产专卖-一个专卖土特产的网站</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="土特产专卖" />
+    <meta name="author" content="templatemo">
+    <meta charset="UTF-8">
+    <meta name="keywords" content="迁西 板栗，新鲜 土特产，专卖" />
+    <!-- CSS Bootstrap & Custom -->
+    @Styles.Render("~/Content/bootstrapcss")
+    @Styles.Render("~/Content/templatemo")
+</head>
+<body>
+    @RenderBody()
+    <!-- JavaScripts -->
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/templatemo")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

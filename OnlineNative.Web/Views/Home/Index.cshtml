@@ -1,0 +1,391 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="row">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="col-md-2 col-sm-2 col-xs-12">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand"><img src="/Content/images/templatemo_logo.png" alt="karma"></a>
+                </div>
+            </div>
+
+            <div class="col-md-10 col-sm-10 col-xs-12">
+                <div class="navbar-collapse collapse menu">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#home"><i class="fa fa-home"></i>首页</a></li>
+                        <li><a href="#about"><i class="fa fa-user"></i>关于TuTg</a></li>
+                        <li><a href="#services"><i class="fa fa-cogs"></i>服务</a></li>
+                        @*<li><a href="#portfolio"><i class="fa fa-briefcase"></i>Portfolio</a></li>
+                            <li><a href="#blog"><i class="fa fa-pencil"></i>聊聊</a></li>*@
+                        <li><a href="#contact"><i class="fa fa-envelope"></i>联系我们</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>
+        </div><!-- /.row -->
+    </div>
+</nav>
+
+<div class="container" id="home">
+    <div class="row">
+        <div class="col col-md-12">
+            <div class="flexslider">
+                <ul class="slides">
+                    <li>
+                        <a href="/tutechan-zhuanmai-qianxi-banli">
+                            <img src="/Content/images/templatemo_slide_1.jpg" alt="slide 1" />
+                            <p class="flex-caption">迁西，拥有板栗之乡的美誉</p>
+                        </a>
+                    </li>
+                    <li>
+                        <img src="/Content/images/templatemo_slide_2.jpg" alt="slide 2" />
+                        <p class="flex-caption">板栗已经成为这长城脚下小城的最重要的经济作物</p>
+                    </li>
+                    <li>
+                        <img src="/Content/images/templatemo_slide_3.jpg" alt="slide 3" />
+                        <p class="flex-caption">板栗极具营养价值，富含丰富的维生素c</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<section id="about">
+    <div class="outer_container">
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-5 col-sm-12"><h1>关于板栗</h1></div>
+                <div class="col col-md-7 col-sm-12 center-row" id="about_content">
+                    <div class="row center">
+                        <div class="col col-md-4 col-sm-12 templatemo_ceo">
+                            <img src="/Content/images/templatemo_image_02.jpg" alt="Linda" class="center-block img-circle img-responsive">
+                            <p>雨中板栗树</p>
+                        </div>
+                        <div class="col col-md-8 col-sm-12">
+                            <p>板栗（学名：Castanea mollissima），又名栗、板栗、栗子、风腊，是壳斗科栗属的植物，原产于中国，分布于越南、台湾以及中国大陆地区，生长于海拔370－2800米的地区，多见于山地，已由人工广泛栽培。栗子营养丰富，维生素C含量比西红柿还要高，更是苹果的十几倍。栗子中的矿物质也很全面，有钾、锌、铁等，虽然含量没有榛子高，但仍比苹果等普通水果高得多，尤其是含钾量比苹果高出3倍。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="team">
+    <div class="outer_container">
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-5 col-md-push-7 col-sm-12"><h1>产地</h1></div>
+                <div class="col col-md-7 col-md-pull-5 col-sm-12 center-row" id="team_content">
+                    <div class="row center">
+                        <div class="col col-md-8 col-sm-12">
+                            <p>迁西县位于燕山南麓，长城脚下，滦水之滨。迁西板栗是河北省传统特色农产品，至今有2000多年的栽培历史，独特的土壤和气候条件造就其绝佳的口感和风味，产品主要销往美国、日本、韩国、港台地区及上海、广州、大连、深圳、昆明等国内60多个大中城市，深受国内外消费者喜爱</p>
+                        </div>
+                        <div class="col col-md-4 col-sm-4 templatemo_ceo">
+                            <img src="/Content/images/templatemo_image_01.jpg" alt="Nancy" class="img-circle img-responsive">
+                            <p>栗花</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="services">
+    <div class="outer_container">
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-5 col-sm-12 col-xs-12">
+                    <h1>服务</h1>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2">
+                    <div class="services_buttons">
+                        <ul id="services_tabs">
+                            <li class="icon-button active" data-target="#pencil"><i class="fa fa-pencil" style="vertical-align: middle"></i></li>
+                            <li class="icon-button" data-target="#cog"><i class="fa fa-cog"></i></li>
+                            @*<li class="icon-button" data-target="#signal"><i class="fa fa-signal"></i></li>*@
+                        </ul>
+                    </div>
+                </div>
+                <div class="col col-md-5 col-sm-10 col-xs-10 center-row" id="services_content">
+                    <div class="arrow-left"></div>
+                    <div class="arrow-box center-row">
+                        <div class="tab-content center">
+                            <div class="tab-pane fade in active" id="pencil">
+                                <h3><a rel="nofollow" href="/Home/Index">标记喜欢</a></h3>
+                                <p>由于现在还没到板栗成熟的季节，想吃新鲜板栗的亲，需要耐心等待了！</p>
+                                <p>等新鲜板栗下树，我们将第一时间通知亲，本人是特别爱吃刚刚下树的板栗的，直接煮熟，不用过多加工，吃起来，香甜可口！！</p>
+                            </div>
+                            <div class="tab-pane fade" id="cog">
+                                <h3><a rel="nofollow" href="/Home/Index">到货提醒</a></h3>
+                                <p>新鲜板栗下树时，我们会第一时间通知您！我们是与果农直接联系，确保货源来自天然正常熟！</p>
+                            </div>
+                            @*<div class="tab-pane fade" id="signal">
+                                    <h3>Social Media</h3>
+                                    <p>Quisque gravida ac nisl nec ultrices. Mauris tincidunt magna vitae feugiat tincidunt. Maecenas semper quis arcu in porta.</p>
+                                    <p>Download <a rel="nofollow" href="#">templates</a> for your websites. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean adipiscing quam sed neque dapibus, id convallis mauris eleifend. Quisque sit amet nisl a ante pulvinar sodales.</p>
+                                </div>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@*<section id="skills">
+        <div class="outer_container">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-md-5 col-md-push-7 col-sm-12"><h1>Skills</h1></div>
+                    <div class="col col-md-7 col-md-pull-5 col-sm-12">
+                        <br>
+                        <div class="progress vertical">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="height: 75%;width: 100%">
+                                <div class="progress-label">
+                                    <p>HTML</p>
+                                    <p>75%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress vertical">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="height: 55%;width: 100%">
+                                <div class="progress-label">
+                                    <p>WP</p>
+                                    <p>55%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress vertical">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="height: 65%;width: 100%">
+                                <div class="progress-label">
+                                    <p>jQuery</p>
+                                    <p>65%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress vertical">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="height: 90%;width: 100%">
+                                <div class="progress-label">
+                                    <p>PHP</p>
+                                    <p>90%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress vertical">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="height: 70%;width: 100%">
+                                <div class="progress-label">
+                                    <p>PS</p>
+                                    <p>70%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>*@
+<section id="portfolio">
+    <div class="outer_container">
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-5 col-sm-12"><h1>土特产</h1></div>
+                <div class="col col-md-7 col-sm-12" id="portfolio_content">
+                    <div class="row">
+                        <div class="col col-md-4 col-sm-4 col-xs-6">
+                            <div class="portfolio-item">
+                                <div class="portfolio-thumb">
+                                    <img src="/Content/images/templatemo_slide_3_sm.png" alt="portfolio image 1" class="img-responsive">
+                                    <div class="overlay-p">
+                                        <a href="#">
+                                            <h2>新鲜板栗</h2>
+                                            <p>刚刚下树的新鲜板栗，无论是生吃，还是煮吃，那香甜！</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-md-4 col-sm-4 col-xs-6">
+                            <div class="portfolio-item">
+                                <div class="portfolio-thumb">
+                                    <img src="/Content/images/templatemo_image_05_sm.jpg" alt="portfolio image 2" class="img-responsive">
+                                    <div class="overlay-p">
+                                        <a href="#">
+                                            <h2>栗蘑干</h2>
+                                            <p>晒干，更易保存，想吃的时候拿出点，泡泡即可</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-md-4 col-sm-4 col-xs-6">
+                            <div class="portfolio-item">
+                                <div class="portfolio-thumb">
+                                    <img src="/Content/images/templatemo_slide_1_sm.jpg" alt="portfolio image 3" class="img-responsive">
+                                    <div class="overlay-p">
+                                        <a href="#">
+                                            <h2>栗蘑炒肉</h2>
+                                            <p>无论是口感，还是营养价值，都是首屈一指的！</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-md-4 col-sm-4 col-xs-6">
+                            <div class="portfolio-item">
+                                <div class="portfolio-thumb">
+                                    <img src="/Content/images/templatemo_image_06_sm.jpg" alt="portfolio image 4" class="img-responsive">
+                                    <div class="overlay-p">
+                                        <a href="#">
+                                            <h2>礼包栗蘑</h2>
+                                            <p>送的不仅仅是面子，还是健康！</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-md-4 col-sm-4 col-xs-6">
+                            <div class="portfolio-item">
+                                <div class="portfolio-thumb">
+                                    <img src="/Content/images/templatemo_image_07_sm.jpg" alt="portfolio image 5" class="img-responsive">
+                                    <div class="overlay-p">
+                                        <a href="#">
+                                            <h2>培育中的栗蘑</h2>
+                                            <p>全程0农药，吃的就是一个放心！</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-md-4 col-sm-4 col-xs-6">
+                            <div class="portfolio-item">
+                                <div class="portfolio-thumb">
+                                    <img src="/Content/images/templatemo_slide_2_sm.jpg" alt="portfolio image 6" class="img-responsive">
+                                    <div class="overlay-p">
+                                        <a href="#">
+                                            <h2>糖炒板栗</h2>
+                                            <p>又香又甜，又有营养</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@*<section id="blog">
+        <div class="outer_container">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-md-5 col-md-push-7 col-sm-12"><h1>Blog</h1></div>
+                    <div class="col col-md-7 col-md-pull-5 col-sm-12">
+                        <div class="blog_posts_container">
+                            <div class="blog_post">
+                                <h2>22<br>October</h2>
+                                <img src="/Content/images/templatemo_image_05.jpg" alt="Blog Post 1" class="img-responsive">
+                            </div>
+                            <div class="blog_post">
+                                <h2>23<br>October</h2>
+                                <img src="/Content/images/templatemo_image_06.jpg" alt="Blog Post 2" class="img-responsive">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>*@
+<section id="contact">
+    <div class="outer_container">
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-5 col-sm-12"><h1>联系我们</h1></div>
+                <div class="col col-md-7 col-sm-12 col-xs-12 center-row" id="contact_content">
+                    <form role="form" action="#" method="post" class="center">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input name="fullname" type="text" class="form-control" id="input_name" placeholder="Name...">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input name="email" type="email" class="form-control" id="input_email" placeholder="Email...">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <textarea name="message" rows="3" class="form-control" id="input_message" placeholder="Message..."></textarea><br>
+                                    <button type="submit" class="btn btn-primary pull-right">SEND</button>
+                                </div>
+                            </div>
+                        </div> <!-- row -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@*<section id="map">
+        <div class="outer_container">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-md-5 col-md-push-7 col-sm-12"><h1>Map</h1></div>
+                    <div class="col col-md-7 col-md-pull-5 col-sm-12">
+                        <div id="google_map">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>*@
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col col-md-6 col-sm-6 col-xs-6 col-xxs">
+                <img src="/Content/images/templatemo_logo.png" alt="karma">
+                <div id="templatemo_copyright">
+                    Copyright &copy; 2014.Company name All rights reserved.
+                </div>
+            </div>
+            <div class="col col-md-6 col-sm-6 col-xs-6 col-xxs">
+                <div class="pull-right">
+                    <div class="social_buttons">
+                        <a href="#" rel="nofollow" class="icon-button facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="#" rel="nofollow" class="icon-button twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="#" rel="nofollow" class="icon-button youtube"><i class="fa fa-youtube"></i></a>
+                    </div>
+                    <a href="#" id="go-top"><div class="back_to_top">Back To Top</div></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+@section scripts{
+    <script type="text/javascript">
+        $(window).load(function () {
+            $('.flexslider').flexslider({
+                animation: "slide",
+                start: function (slider) {
+                    $('body').removeClass('loading');
+                    $('.menu').singlePageNav();
+                }
+            });
+        });
+        $('#go-top').click(function (event) {
+            event.preventDefault();
+            jQuery('html, body').animate({ scrollTop: 0 }, 1000);
+            return false;
+        });
+    </script>
+}
+

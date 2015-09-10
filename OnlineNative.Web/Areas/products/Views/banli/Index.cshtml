@@ -1,0 +1,123 @@
+﻿@{
+    Layout = "~/Areas/products/Views/Shared/_Layout.cshtml";
+}
+<!--content-->
+<div class="content">
+
+    <!--products-->
+    <div class="about">
+        <div class="about-top">
+            <h1>板栗</h1>
+            <p>刚刚下树的新鲜板栗，无论是生吃，还是煮吃，那香甜！</p>
+        </div>
+        <div class="about-middle">
+            <div class="col-md-4">
+                <img class="img-responsive" src="~/Content/images/ab.png" />
+            </div>
+            <div class="col-md-7 mid-about">
+                <p>
+                    板栗（学名：Castanea mollissima），又名栗、板栗、栗子、风腊，是壳斗科栗属的植物，原产于中国，分布于越南、台湾以及中国大陆地区，生长于海拔370－2800米的地区，多见于山地，已由人工广泛栽培。栗子营养丰富，维生素C含量比西红柿还要高，更是苹果的十几倍。栗子中的矿物质也很全面，有钾、锌、铁等，虽然含量没有榛子高，但仍比苹果等普通水果高得多，尤其是含钾量比苹果高出3倍。
+
+                </p>
+                <p>
+                    迁西县位于燕山南麓，长城脚下，滦水之滨。迁西板栗是河北省传统特色农产品，至今有2000多年的栽培历史，独特的土壤和气候条件造就其绝佳的口感和风味，产品主要销往美国、日本、韩国、港台地区及上海、广州、大连、深圳、昆明等国内60多个大中城市，深受国内外消费者喜爱
+                </p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="about-bottom">
+            <div class="col-md-4 use-bottom">
+                <h3>我们的板栗</h3>
+                <div class="our">
+                    <div class="col-md-10 our-at">
+                        <img class="img-responsive" src="~/Content/images/ab1.jpg" alt="">
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+            <div class="col-md-4 bottom-about">
+                <h2>我们 产品</h2>
+                <h4>我们拥有得天独厚的优势！</h4>
+                <ul>
+                    <li><a href="#"><i></i> 全部直接从产地收购，保证产品源头</a></li>
+                    <li><a href="#"><i></i> 收购过程精挑细选，保证产品是精品中的精品</a></li>
+                    <li><a href="#"><i></i> 产品种植过程，全程跟踪，保证0残留</a></li>
+                    <li><a href="#"><i></i> 天然贮藏，不添加任何防腐剂</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 our-at">
+                <br />
+                <div class="choose-amount fl about-middle ">
+                    <div class="wrap-input">
+                        <a class="btn-reduce" href="javascript:;" onclick="ReduceBuyNum('buy-num')">-</a>
+                        <a class="btn-add" href="javascript:;" onclick="AddBuyNum('buy-num')">+</a>
+                        <input class="text" id="buy-num" value="1" onkeyup="ModifyBuyNum('buy-num');">
+                    </div>
+                </div>
+
+                <br />
+                <br />
+                <div class="about-bottom">
+                    <a class="hvr-bounce-to-top" href="#">团 购</a>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!--//products-->
+    <!--events-->
+    <div class="content-mid">
+        <h3> 评价</h3>
+        <div class="news">
+            <div class="col-md-6 new-more">
+                <div class="six">
+                    <h4><span>@DateTime.Now.ToString("MM-dd")</span></h4>
+                    <h6><a href="#">用户 </a></h6>
+                    <div class="clearfix"> </div>
+                </div>
+                <p>香甜可口，质量确实不错，感觉好好的！</p>
+            </div>
+            <div class="col-md-6 new-more">
+                <div class="six">
+                    <h4><span>@DateTime.Now.ToString("MM-dd")</span></h4>
+                    <h6><a href="#">用户 </a></h6>
+                    <div class="clearfix"> </div>
+                </div>
+                <p>香甜可口，质量确实不错，感觉好好的！</p>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <!--//events-->
+
+
+</div>
+<!--//content-->
+<!--footer-->
+@section scripts{
+    <script type="text/javascript" src="~/Scripts/jquery/regexenum.js"></script>
+    <script type="text/javascript">
+        function ReduceBuyNum(id) {
+            var now = parseInt($("#" + id).val());
+            var re = now - 1;
+            if (re <= 0) {
+                re = 1;
+            }
+            $("#" + id).val(re);
+        }
+        function AddBuyNum(id) {
+            var now = parseInt($("#" + id).val());
+            var re = now + 1;
+            if (re <= 0) {
+                re = 1;
+            }
+            $("#" + id).val(re);
+        }
+        function ModifyBuyNum(id) {
+            var reg = eval("regexEnum.intege1");
+            if (!reg.test($("#" + id).val())) {
+                $("#" + id).val(1);
+            }
+        }
+    </script>
+}

@@ -1,0 +1,5 @@
+D:\yule\OnlineNative.Domain\OnlineNative.Events.Handlers\bin\Debug\OnlineNative.Events.Handlers.dll
+D:\yule\OnlineNative.Domain\OnlineNative.Events.Handlers\bin\Debug\OnlineNative.Events.Handlers.pdb
+D:\yule\OnlineNative.Domain\OnlineNative.Events.Handlers\obj\Debug\OnlineNative.Events.Handlers.csprojResolveAssemblyReference.cache
+D:\yule\OnlineNative.Domain\OnlineNative.Events.Handlers\obj\Debug\OnlineNative.Events.Handlers.dll
+D:\yule\OnlineNative.Domain\OnlineNative.Events.Handlers\obj\Debug\OnlineNative.Events.Handlers.pdb
