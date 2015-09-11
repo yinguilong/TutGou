@@ -45,6 +45,8 @@ namespace OnlineNative.Domain.Model
 
         //用户的收货地址
         public IEnumerable<Address> ReciveAddress { get; set; }
+        //用户的发货地址
+        public Address DeliveryAddress { get; set; }
 
         public IEnumerable<Order> Orders
         {

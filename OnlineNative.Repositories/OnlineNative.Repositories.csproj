@@ -34,11 +34,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Mono.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contracts\IEntityFrameworkRepositoryContext.cs" />
+    <Compile Include="EntityFramework\CategoryRepository.cs" />
     <Compile Include="EntityFramework\EntityFrameworkRepository.cs" />
     <Compile Include="EntityFramework\EntityFrameworkRepositoryContext.cs" />
     <Compile Include="EntityFramework\ModelConfigurations\CategoryTypeConfiguration.cs" />
@@ -75,7 +76,13 @@
     <Compile Include="EntityFramework\ModelConfigurations\ShoppingCartTypeConfiguration.cs" />
     <Compile Include="EntityFramework\ModelConfigurations\UserTypeConfiguration.cs" />
     <Compile Include="EntityFramework\OnlineNativeDbContext.cs" />
+    <Compile Include="EntityFramework\OrderRepository.cs" />
+    <Compile Include="EntityFramework\RoleRepository.cs" />
+    <Compile Include="EntityFramework\ShoppingCartItemRepository.cs" />
+    <Compile Include="EntityFramework\ShoppingCartRepository.cs" />
     <Compile Include="EntityFramework\SortByExtension.cs" />
+    <Compile Include="EntityFramework\UserRepository.cs" />
+    <Compile Include="EntityFramework\UserRoleRepository.cs" />
     <Compile Include="Migrations\201507230928028_InitialCreate.cs" />
     <Compile Include="Migrations\201507230928028_InitialCreate.Designer.cs">
       <DependentUpon>201507230928028_InitialCreate.cs</DependentUpon>

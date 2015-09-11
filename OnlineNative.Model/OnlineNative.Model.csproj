@@ -41,9 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\IUserService.cs" />
     <Compile Include="CurrentUser.cs" />
+    <Compile Include="DTOs\AddressDto.cs" />
     <Compile Include="DTOs\CategoryDto.cs" />
     <Compile Include="DTOs\NativeProductDto.cs" />
+    <Compile Include="DTOs\OrderDto.cs" />
+    <Compile Include="DTOs\OrderItemDto.cs" />
+    <Compile Include="DTOs\ProductCategorizationDto.cs" />
+    <Compile Include="DTOs\ProductDto.cs" />
+    <Compile Include="DTOs\RoleDto.cs" />
+    <Compile Include="DTOs\ShoppingCartDto.cs" />
+    <Compile Include="DTOs\ShoppingCartItemDto.cs" />
+    <Compile Include="DTOs\UserDto.cs" />
     <Compile Include="Enum\DictOrderStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReadonlyCollection.cs" />

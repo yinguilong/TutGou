@@ -47,6 +47,8 @@
             </div>
             <div class="col-md-4 our-at">
                 <br />
+                <br />
+                <br />
                 <div class="choose-amount fl about-middle ">
                     <div class="wrap-input">
                         <a class="btn-reduce" href="javascript:;" onclick="ReduceBuyNum('buy-num')">-</a>
@@ -54,11 +56,8 @@
                         <input class="text" id="buy-num" value="1" onkeyup="ModifyBuyNum('buy-num');">
                     </div>
                 </div>
-
-                <br />
-                <br />
                 <div class="about-bottom">
-                    <a class="hvr-bounce-to-top" href="#">团 购</a>
+                    <a class="hvr-bounce-to-top" href="javascript:void(0);" onclick="">团&nbsp;&nbsp;购</a>
                 </div>
             </div>
             <div class="clearfix"></div>
@@ -76,6 +75,7 @@
                     <div class="clearfix"> </div>
                 </div>
                 <p>香甜可口，质量确实不错，感觉好好的！</p>
+                <a class="hvr-bounce-to-top" href="javascript:void(0);">回&nbsp;&nbsp;复</a>
             </div>
             <div class="col-md-6 new-more">
                 <div class="six">
@@ -84,6 +84,7 @@
                     <div class="clearfix"> </div>
                 </div>
                 <p>香甜可口，质量确实不错，感觉好好的！</p>
+                <a class="hvr-bounce-to-top" href="javascript:void(0);">回&nbsp;&nbsp;复</a>
             </div>
             <div class="clearfix"> </div>
         </div>
@@ -114,7 +115,7 @@
             $("#" + id).val(re);
         }
         function ModifyBuyNum(id) {
-            var reg = eval("regexEnum.intege1");
+            var reg = new RegExp(eval("regexEnum.intege1"));
             if (!reg.test($("#" + id).val())) {
                 $("#" + id).val(1);
             }
