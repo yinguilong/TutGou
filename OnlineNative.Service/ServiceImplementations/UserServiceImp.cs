@@ -2,6 +2,7 @@
 using OnlineNative.Domain;
 using OnlineNative.Domain.Model;
 using OnlineNative.Domain.Repositories;
+using OnlineNative.Domain.Services;
 using OnlineNative.Model.Contracts;
 using OnlineNative.Model.DTOs;
 /************************************************************************************
