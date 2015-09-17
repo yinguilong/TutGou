@@ -37,10 +37,10 @@ namespace OnlineNative.Repositories
         }
         public DbSet<NativeProduct> NativeProduct { get; set; }
         public DbSet<OrderItem> OrderItem { get; set; }
-        public DbSet<User> User { get; set; }
+        public DbSet<User> Users { get; set; }
         public DbSet<Category> Category { get; set; }
         public DbSet<ProductCategorization> ProductCategorization { get; set; }
-        public DbSet<Order> Order { get; set; }
+        public DbSet<Order> Orders { get; set; }
         public DbSet<ShoppingCart> ShoppingCart { get; set; }
         public DbSet<ShoppingCartItem> ShoppingCartItem { get; set; }
 
@@ -54,7 +54,7 @@ namespace OnlineNative.Repositories
             get;
             set;
         }
-        public DbSet<User> Users { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder

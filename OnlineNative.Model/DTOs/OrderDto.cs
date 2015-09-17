@@ -21,7 +21,7 @@ namespace OnlineNative.Model.DTOs
     {
         public string Id { get; set; }
 
-        public OrderStatusDto? Status { get; set; }
+        public int Status { get; set; }
 
         public DateTime? CreatedDate { get; set; }
         public DateTime? DispatchedDate { get; set; }

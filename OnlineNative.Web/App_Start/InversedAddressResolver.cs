@@ -8,7 +8,7 @@ using System.Web;
 
 namespace OnlineNative.Web.App_Start
 {
-    public class InversedAddressResolver : ValueResolver<AddressDto, Address>
+    public class InversedAddressResolver : ValueResolver<Address, AddressDto>
     {
         protected override AddressDto ResolveCore(Address source)
         {

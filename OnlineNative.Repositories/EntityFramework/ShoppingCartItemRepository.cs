@@ -1,5 +1,6 @@
 ﻿using OnlineNative.Domain;
 using OnlineNative.Domain.Model;
+using OnlineNative.Domain.Repositories;
 /************************************************************************************
  * Copyright (c) 2015Microsoft All Rights Reserved.
  * CLR版本： 4.5

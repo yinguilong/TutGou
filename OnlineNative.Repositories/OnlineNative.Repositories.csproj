@@ -77,6 +77,7 @@
     <Compile Include="EntityFramework\ModelConfigurations\UserTypeConfiguration.cs" />
     <Compile Include="EntityFramework\OnlineNativeDbContext.cs" />
     <Compile Include="EntityFramework\OrderRepository.cs" />
+    <Compile Include="EntityFramework\ProductRepository.cs" />
     <Compile Include="EntityFramework\RoleRepository.cs" />
     <Compile Include="EntityFramework\ShoppingCartItemRepository.cs" />
     <Compile Include="EntityFramework\ShoppingCartRepository.cs" />
@@ -86,6 +87,10 @@
     <Compile Include="Migrations\201507230928028_InitialCreate.cs" />
     <Compile Include="Migrations\201507230928028_InitialCreate.Designer.cs">
       <DependentUpon>201507230928028_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509170608561_UpdateUser.cs" />
+    <Compile Include="Migrations\201509170608561_UpdateUser.Designer.cs">
+      <DependentUpon>201509170608561_UpdateUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -109,6 +114,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201507230928028_InitialCreate.resx">
       <DependentUpon>201507230928028_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509170608561_UpdateUser.resx">
+      <DependentUpon>201509170608561_UpdateUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

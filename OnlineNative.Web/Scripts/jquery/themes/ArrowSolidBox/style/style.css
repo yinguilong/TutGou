@@ -1,0 +1,108 @@
+.onLoad {
+    background: #E9FFEB url(../images/onLoad.gif) no-repeat 3px 3px;
+    padding-left: 25px;
+    font-size: 12px;
+    line-height: 22px;
+    vertical-align: middle;
+}
+
+.onCorrect {
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    margin: 8px 0 0 10px;
+    background: url(../images/onLoad.gif) no-repeat 0px -22px;
+    float: left;
+    vertical-align: middle;
+}
+
+.onError .onFocus p {
+    list-style-type: none;
+    list-style-image: none;
+    line-height: 2;
+}
+
+.onError .onFocus span {
+    color: #000;
+    font-size: 12px;
+}
+
+.onFocus {
+    height: 20px;
+    padding-top: 3px;
+    left: 0px;
+    top: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.onFocus_top {
+    text-align: left;
+    padding-left: 30px;
+    padding-right: 5px;
+    border-right: solid 1px #ffc7c7;
+    margin-top: 4px;
+    height: 24px;
+    display: block;
+    line-height: 24px;
+    background: url(../images/verification-ui6.gif) no-repeat 0px -25px;
+}
+
+.onFocus_bot {
+    text-align: left;
+    padding-left: 30px;
+    padding-right: 5px;
+    border-right: solid 1px #b9e3ff;
+    margin-top: 4px;
+    height: 24px;
+    line-height: 24px;
+    background: url(../images/verification-ui6.gif) no-repeat 0px 0px;
+    overflow: hidden;
+}
+
+.onError {
+    height: 20px;
+    padding-top: 3px;
+    left: 0px;
+    top: 0px;
+    padding: 0px;
+    margin:: 0px;
+}
+
+.onError_top {
+    text-align: left;
+    padding-left: 30px;
+    padding-right: 5px;
+    border-right: solid 1px #ffc7c7;
+    margin-top: 4px;
+    height: 24px;
+    line-height: 24px;
+    display: block;
+    background: url(../images/verification-ui6.gif) no-repeat 0px -25px;
+}
+
+.onError_bot {
+    text-align: left;
+    padding-left: 30px;
+    padding-right: 5px;
+    border-right: solid 1px #b9e3ff;
+    margin-top: 4px;
+    height: 24px;
+    line-height: 24px;
+    background: url(../images/verification-ui6.gif) no-repeat 0px 0px;
+    overflow: hidden;
+}
+
+.input_focus {
+    background-color: #FFC;
+    border-color: #C6C69E;
+}
+
+.input_login {
+    width: 140px;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    border: solid 1px #CCCCCC;
+    padding: 0 5px;
+}

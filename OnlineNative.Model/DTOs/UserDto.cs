@@ -22,6 +22,7 @@ namespace OnlineNative.Model.DTOs
 
         public string Id { get; set; }
         public string UserName { get; set; }
+        public string LoginAccount { get; set; }
         public string Password { get; set; }
         public string Email { get; set; }
         public bool? IsDisabled { get; set; }
