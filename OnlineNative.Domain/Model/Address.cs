@@ -25,11 +25,9 @@ using System.Threading.Tasks;
 
 namespace OnlineNative.Domain.Model
 {
-    public class Address : IEntity
+    public class Address
     {
-        #region IEnity Member
-        public Guid Id { get; set; }
-        #endregion
+
         #region Properties
         // 国家
         public string Country { get; set; }
@@ -43,10 +41,6 @@ namespace OnlineNative.Domain.Model
         public string Street { get; set; }
 
         public string Zip { get; set; }
-        /// <summary>
-        /// 地址所属用户ID
-        /// </summary>
-        public Guid UserId { get; set; }
         #endregion
 
         #region Object Member

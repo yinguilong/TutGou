@@ -13,7 +13,7 @@ namespace OnlineNative.Model.Contracts
 
         IList<UserDto> CreateUsers(List<UserDto> userDtos);
 
-        bool ValidateUser(string userName, string password);
+        bool ValidateUser(string loginAccount, string password);
 
         bool DisableUser(UserDto userDto);
 
@@ -28,6 +28,7 @@ namespace OnlineNative.Model.Contracts
         UserDto GetUserByEmail(string email);
 
         UserDto GetUserByName(string userName);
+        UserDto GetUserByLoginAccount(string loginAccount);
 
         IList<UserDto> GetUsers();
 

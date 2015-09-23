@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data.Entity;
 using System.Threading;
 
-namespace OnlineNative.Repositories
+namespace OnlineNative.Repositories.EntityFramework
 {
     public class EntityFrameworkRepositoryContext : IEntityFrameworkRepositoryContext
     {
@@ -51,6 +51,6 @@ namespace OnlineNative.Repositories
             var validationError = _localCtx.Value.GetValidationErrors();
             _localCtx.Value.SaveChanges();
         }
-        #endregion 
+        #endregion
     }
 }

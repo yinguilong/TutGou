@@ -123,3 +123,13 @@ E:\GitHub\OnlineNative.Domain\OnlineNative.Repositories\bin\Debug\fr\Npgsql.reso
 E:\GitHub\OnlineNative.Domain\OnlineNative.Repositories\bin\Debug\ja\Npgsql.resources.dll
 E:\GitHub\OnlineNative.Domain\OnlineNative.Repositories\bin\Debug\zh-CN\Npgsql.resources.dll
 E:\GitHub\OnlineNative.Domain\OnlineNative.Repositories\obj\Debug\OnlineNative.Repositories.Migrations.UpdateUser.resources
+E:\GitHub\OnlineNative.Domain\OnlineNative.Repositories\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+E:\GitHub\OnlineNative.Domain\OnlineNative.Repositories\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.dll
+E:\GitHub\OnlineNative.Domain\OnlineNative.Repositories\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+E:\GitHub\OnlineNative.Domain\OnlineNative.Repositories\bin\Debug\Microsoft.Practices.Unity.Interception.xml
+E:\GitHub\OnlineNative.Domain\OnlineNative.Repositories\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.xml
+E:\GitHub\OnlineNative.Domain\OnlineNative.Repositories\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
+E:\GitHub\OnlineNative.Domain\OnlineNative.Repositories\obj\Debug\OnlineNative.Repositories.Migrations.ChangeUserTable.resources
+E:\GitHub\OnlineNative.Domain\OnlineNative.Repositories\obj\Debug\OnlineNative.Repositories.Migrations.ChangeAddress.resources
+E:\GitHub\OnlineNative.Domain\OnlineNative.Repositories\obj\Debug\OnlineNative.Repositories.Migrations.UpdateAddress.resources
+E:\GitHub\OnlineNative.Domain\OnlineNative.Repositories\obj\Debug\OnlineNative.Repositories.Migrations.UpdateUserPassWord.resources

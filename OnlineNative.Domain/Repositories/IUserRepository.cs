@@ -10,6 +10,6 @@ namespace OnlineNative.Domain.Repositories
     public interface IUserRepository : IRepository<User>
     {
 
-        bool CheckPassword(string userName, string password);
+        bool CheckPassword(string loginAccount, string password);
     }
 }

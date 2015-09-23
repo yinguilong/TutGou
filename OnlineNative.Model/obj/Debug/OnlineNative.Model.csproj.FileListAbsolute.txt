@@ -8,8 +8,8 @@ E:\yule\OnlineNative.Domain\OnlineNative.Model\bin\Debug\OnlineNative.Model.pdb
 E:\yule\OnlineNative.Domain\OnlineNative.Model\obj\Debug\OnlineNative.Model.csprojResolveAssemblyReference.cache
 E:\yule\OnlineNative.Domain\OnlineNative.Model\obj\Debug\OnlineNative.Model.dll
 E:\yule\OnlineNative.Domain\OnlineNative.Model\obj\Debug\OnlineNative.Model.pdb
-E:\GitHub\OnlineNative.Domain\OnlineNative.Model\obj\Debug\OnlineNative.Model.csprojResolveAssemblyReference.cache
 E:\GitHub\OnlineNative.Domain\OnlineNative.Model\obj\Debug\OnlineNative.Model.dll
 E:\GitHub\OnlineNative.Domain\OnlineNative.Model\obj\Debug\OnlineNative.Model.pdb
 E:\GitHub\OnlineNative.Domain\OnlineNative.Model\bin\Debug\OnlineNative.Model.dll
 E:\GitHub\OnlineNative.Domain\OnlineNative.Model\bin\Debug\OnlineNative.Model.pdb
+E:\GitHub\OnlineNative.Domain\OnlineNative.Model\obj\Debug\OnlineNative.Model.csprojResolveAssemblyReference.cache

@@ -43,3 +43,10 @@ E:\GitHub\OnlineNative.Domain\OnlineNative.Events\bin\Debug\Microsoft.Practices.
 E:\GitHub\OnlineNative.Domain\OnlineNative.Events\obj\Debug\OnlineNative.Events.csprojResolveAssemblyReference.cache
 E:\GitHub\OnlineNative.Domain\OnlineNative.Events\obj\Debug\OnlineNative.Events.dll
 E:\GitHub\OnlineNative.Domain\OnlineNative.Events\obj\Debug\OnlineNative.Events.pdb
+E:\GitHub\OnlineNative.Domain\OnlineNative.Events\bin\Debug\OnlineNative.Events.dll.config
+E:\GitHub\OnlineNative.Domain\OnlineNative.Events\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+E:\GitHub\OnlineNative.Domain\OnlineNative.Events\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.dll
+E:\GitHub\OnlineNative.Domain\OnlineNative.Events\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+E:\GitHub\OnlineNative.Domain\OnlineNative.Events\bin\Debug\Microsoft.Practices.Unity.Interception.xml
+E:\GitHub\OnlineNative.Domain\OnlineNative.Events\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.xml
+E:\GitHub\OnlineNative.Domain\OnlineNative.Events\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml

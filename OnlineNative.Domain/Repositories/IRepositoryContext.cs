@@ -23,7 +23,7 @@ using System.Text;
 using System.Threading.Tasks;
 using OnlineNative.Infrastructure;
 
-namespace OnlineNative.Domain
+namespace OnlineNative.Domain.Repositories
 {
     public interface IRepositoryContext : IUnitOfWork
     {

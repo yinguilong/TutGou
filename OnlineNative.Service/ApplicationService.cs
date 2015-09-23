@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using OnlineNative.Domain;
 using OnlineNative.Domain.Model;
+using OnlineNative.Domain.Repositories;
 using OnlineNative.Model.DTOs;
 /************************************************************************************
  * Copyright (c) 2015Microsoft All Rights Reserved.

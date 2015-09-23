@@ -53,3 +53,10 @@ E:\GitHub\OnlineNative.Domain\OnlineNative.Domain\bin\Debug\System.Web.Mvc.xml
 E:\GitHub\OnlineNative.Domain\OnlineNative.Domain\bin\Debug\Microsoft.Practices.Unity.xml
 E:\GitHub\OnlineNative.Domain\OnlineNative.Domain\bin\Debug\log4net.xml
 E:\GitHub\OnlineNative.Domain\OnlineNative.Domain\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+E:\GitHub\OnlineNative.Domain\OnlineNative.Domain\bin\Debug\OnlineNative.Domain.dll.config
+E:\GitHub\OnlineNative.Domain\OnlineNative.Domain\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+E:\GitHub\OnlineNative.Domain\OnlineNative.Domain\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.dll
+E:\GitHub\OnlineNative.Domain\OnlineNative.Domain\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+E:\GitHub\OnlineNative.Domain\OnlineNative.Domain\bin\Debug\Microsoft.Practices.Unity.Interception.xml
+E:\GitHub\OnlineNative.Domain\OnlineNative.Domain\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.xml
+E:\GitHub\OnlineNative.Domain\OnlineNative.Domain\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml

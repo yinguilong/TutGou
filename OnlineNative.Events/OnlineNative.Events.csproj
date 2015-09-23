@@ -45,6 +45,7 @@
     <Compile Include="Base\IEvent.cs" />
     <Compile Include="Base\IEventAggregator.cs" />
     <Compile Include="Base\IEventHandler.cs" />
+    <Compile Include="Bus\EventBus.cs" />
     <Compile Include="Bus\IBus.cs" />
     <Compile Include="Bus\IEventBus.cs" />
     <Compile Include="Bus\MsmqBusOptions.cs" />
@@ -56,6 +57,9 @@
       <Project>{3a0e04bf-23c2-4eef-9f1a-0aa84847d190}</Project>
       <Name>OnlineNative.Infrastructure</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

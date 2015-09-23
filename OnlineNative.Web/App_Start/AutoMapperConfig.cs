@@ -7,6 +7,7 @@ using OnlineNative.Model.DTOs;
 using OnlineNative.Domain.Model;
 using OnlineNative.Web.App_Start;
 using OnlineNative.Model.Enum;
+using OnlineNative.Web.WebBase;
 
 namespace OnlineNative.Web
 {
@@ -18,13 +19,17 @@ namespace OnlineNative.Web
             Mapper.CreateMap<UserDto, User>()
                 .ForMember(uMermber => uMermber.ContactAddress, mceUto => mceUto.ResolveUsing<AddressResolver>().FromMember(fm => fm.ContactAddress))
                 .ForMember(uMember => uMember.DeliveryAddress, mceUto =>
-                        mceUto.ResolveUsing<AddressResolver>().FromMember(fm => fm.DeliveryAddress));
+                        mceUto.ResolveUsing<AddressResolver>().FromMember(fm => fm.DeliveryAddress))
+                        .ForMember(uMember => uMember.Password, mceUto =>
+                        mceUto.ResolveUsing<PassWordResolver>().FromMember(fm => fm.Password));
 
             Mapper.CreateMap<User, UserDto>()
                .ForMember(udoMember => udoMember.ContactAddress, mceU =>
                    mceU.ResolveUsing<InversedAddressResolver>().FromMember(fm => fm.ContactAddress))
                    .ForMember(udoMember => udoMember.DeliveryAddress, mceU =>
-                       mceU.ResolveUsing<InversedAddressResolver>().FromMember(fm => fm.DeliveryAddress));
+                       mceU.ResolveUsing<InversedAddressResolver>().FromMember(fm => fm.DeliveryAddress))
+                       .ForMember(udoMember => udoMember.Password, mceu => mceu.ResolveUsing<InversedPassWordResolver>().FromMember(fm => fm.Password))
+                       ;
 
             Mapper.CreateMap<NativeProduct, ProductDto>();
             Mapper.CreateMap<ProductDto, NativeProduct>();

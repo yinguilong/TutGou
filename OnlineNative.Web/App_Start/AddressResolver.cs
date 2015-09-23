@@ -12,6 +12,14 @@ namespace OnlineNative.Web.App_Start
     {
         protected override Address ResolveCore(AddressDto source)
         {
+            if (source == null) return new Address()
+            {
+                City = "未知",
+                Country = "未知",
+                State = "未知",
+                Street = "未知",
+                Zip = "未知"
+            };
             return new Address
             {
                 City = source.City,

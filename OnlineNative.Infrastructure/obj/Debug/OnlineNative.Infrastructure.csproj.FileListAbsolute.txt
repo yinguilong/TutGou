@@ -71,3 +71,12 @@ E:\GitHub\OnlineNative.Domain\OnlineNative.Infrastructure\bin\Debug\System.Web.W
 E:\GitHub\OnlineNative.Domain\OnlineNative.Infrastructure\obj\Debug\OnlineNative.Infrastructure.csprojResolveAssemblyReference.cache
 E:\GitHub\OnlineNative.Domain\OnlineNative.Infrastructure\obj\Debug\OnlineNative.Infrastructure.dll
 E:\GitHub\OnlineNative.Domain\OnlineNative.Infrastructure\obj\Debug\OnlineNative.Infrastructure.pdb
+E:\GitHub\OnlineNative.Domain\OnlineNative.Infrastructure\bin\Debug\Microsoft.Practices.Unity.Interception.Configuration.dll
+E:\GitHub\OnlineNative.Domain\OnlineNative.Infrastructure\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+E:\GitHub\OnlineNative.Domain\OnlineNative.Infrastructure\bin\Debug\Microsoft.Practices.Unity.Interception.xml
+E:\GitHub\OnlineNative.Domain\OnlineNative.Infrastructure\bin\Debug\Microsoft.Practices.Unity.Interception.Configuration.xml
+E:\GitHub\OnlineNative.Domain\OnlineNative.Infrastructure\bin\Debug\OnlineNative.Infrastructure.dll.config
+E:\GitHub\OnlineNative.Domain\OnlineNative.Infrastructure\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.dll
+E:\GitHub\OnlineNative.Domain\OnlineNative.Infrastructure\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+E:\GitHub\OnlineNative.Domain\OnlineNative.Infrastructure\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.xml
+E:\GitHub\OnlineNative.Domain\OnlineNative.Infrastructure\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml

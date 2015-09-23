@@ -25,6 +25,7 @@ using Microsoft.Practices.Unity;
 using Microsoft.Practices.Unity.Configuration;
 using System.Configuration;
 using System.Reflection;
+using OnlineNative.Infrastructure.Utils;
 
 namespace OnlineNative.Infrastructure
 {
@@ -38,13 +39,13 @@ namespace OnlineNative.Infrastructure
             _container = new UnityContainer();
             try
             {
-                UnityConfigurationSection configuration = ConfigurationManager.GetSection(UnityConfigurationSection.SectionName) as UnityConfigurationSection;
-                configuration.Configure(_container, "defaultContainer");
+                UnityConfigurationSection section = (UnityConfigurationSection)ConfigurationManager.GetSection("unity");
+                _container.LoadConfiguration(section);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                Common.Log(ex);
             }
 
         }

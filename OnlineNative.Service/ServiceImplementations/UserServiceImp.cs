@@ -47,6 +47,7 @@ namespace OnlineNative.Service.ServiceImplementations
             _userRoleRepository = userRoleRepository;
         }
 
+
         #region IUserService Members
         public IList<UserDto> CreateUsers(List<UserDto> userDtos)
         {
@@ -66,14 +67,14 @@ namespace OnlineNative.Service.ServiceImplementations
                 });
         }
 
-        public bool ValidateUser(string userName, string password)
+        public bool ValidateUser(string loginAccount, string password)
         {
-            if (string.IsNullOrEmpty(userName))
+            if (string.IsNullOrEmpty(loginAccount))
                 throw new ArgumentNullException("userName");
             if (string.IsNullOrEmpty(password))
                 throw new ArgumentNullException("password");
 
-            return _userRepository.CheckPassword(userName, password);
+            return _userRepository.CheckPassword(loginAccount, password);
         }
 
         public bool DisableUser(UserDto userDto)
@@ -214,9 +215,22 @@ namespace OnlineNative.Service.ServiceImplementations
         {
             if (string.IsNullOrEmpty(userName))
                 throw new ArgumentException("userName");
-            var user = _userRepository.GetByExpression(u => u.UserName == userName);
+            var user = _userRepository.GetByExpression(u => u.UserName.Equals(userName));
             var userDto = Mapper.Map<User, UserDto>(user);
             return userDto;
+        }
+        /// <summary>
+        /// 根据账号获取用户实体
+        /// </summary>
+        /// <param name="loginAccount"></param>
+        /// <returns></returns>
+        public UserDto GetUserByLoginAccount(string loginAccount)
+        {
+            if (string.IsNullOrEmpty(loginAccount))
+            {
+                return null;
+            }
+            return Mapper.Map<User, UserDto>(_userRepository.GetByExpression(x => x.LoginAccount.Equals(loginAccount)));
         }
 
 
@@ -321,7 +335,7 @@ namespace OnlineNative.Service.ServiceImplementations
             result = orders.Select(so => Mapper.Map<Order, OrderDto>(so)).ToList();
             return result;
         }
-        #endregion 
+        #endregion
     }
 }
 

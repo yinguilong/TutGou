@@ -25,6 +25,8 @@ using System.Threading.Tasks;
 using OnlineNative.Domain;
 using System.Linq.Expressions;
 using System.Data.SqlClient;
+using OnlineNative.Repositories.EntityFramework;
+using OnlineNative.Domain.Repositories;
 namespace OnlineNative.Repositories
 {
     public class EntityFrameworkRepository<TAggregateRoot>:IRepository<TAggregateRoot> 

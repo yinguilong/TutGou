@@ -5,13 +5,16 @@ using System.Web;
 using System.Web.Mvc;
 
 using OnlineNative.Model.DTOs;
+using OnlineNative.Model.Contracts;
+using OnlineNative.Infrastructure;
+using OnlineNative.Infrastructure.Utils;
 namespace OnlineNative.Web.Areas.users.Controllers
 {
     public class usersController : BaseController
     {
         //
         // GET: /users/users/
-
+        private readonly IUserService _userServiceImp = ServiceLocator.Instance.GetService<IUserService>();
         public ActionResult Index()
         {
             return View();
@@ -22,8 +25,14 @@ namespace OnlineNative.Web.Areas.users.Controllers
         }
         public ActionResult CreateUser(UserDto user)
         {
-
-            return View();
+            if (user != null)
+            {
+                var list = new List<UserDto>();
+                list.Add(user);
+                _userServiceImp.CreateUsers(list);
+            }
+            //这里应该跳转到注册完毕的页面
+            return Alert("注册成功");
         }
         public string CheckUserNickName(string UserName)
         {
@@ -31,8 +40,7 @@ namespace OnlineNative.Web.Areas.users.Controllers
             {
                 return "用户名不能为空";
             }
-
-            var tuserLogin = new UserDto(); //userBll.GetUserByNickName(nickName.Replace(" ", ""), CurrentOperator.DealerId);
+            var tuserLogin = _userServiceImp.GetUserByName(UserName); //userBll.GetUserByNickName(nickName.Replace(" ", ""), CurrentOperator.DealerId);
             if (tuserLogin == null)
             {
                 return "true";
@@ -45,20 +53,17 @@ namespace OnlineNative.Web.Areas.users.Controllers
         }
         public string CheckUserAccount(string LoginAccount)
         {
+
             if (string.IsNullOrEmpty(LoginAccount))
             {
                 return "账号不能为空";
             }
-
-            var tuserLogin = new UserDto(); //userBll.GetUserByNickName(nickName.Replace(" ", ""), CurrentOperator.DealerId);
+            //IUserService _userServiceImp = ServiceLocator.Instance.GetService<IUserService>();
+            var tuserLogin = _userServiceImp.GetUserByLoginAccount(LoginAccount); //userBll.GetUserByNickName(nickName.Replace(" ", ""), CurrentOperator.DealerId);
             if (tuserLogin == null)
             {
                 return "true";
             }
-            //else if (userId.HasValue && userId.Value > 0 && tuserLogin.UserId == userId.Value)
-            //{
-            //    return "true";
-            //}
             return "该账号不可用，请更换";
         }
     }

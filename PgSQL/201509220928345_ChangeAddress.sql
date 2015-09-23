@@ -1,0 +1,85 @@
+﻿ALTER TABLE "dbo"."Orders" DROP CONSTRAINT IF EXISTS "FK_dbo.Orders_dbo.Addresses_DeliveryAddress_Id"
+;
+
+ALTER TABLE "dbo"."Users" DROP CONSTRAINT IF EXISTS "FK_dbo.Users_dbo.Addresses_ContactAddress_Id"
+;
+
+ALTER TABLE "dbo"."Users" DROP CONSTRAINT IF EXISTS "FK_dbo.Users_dbo.Addresses_DeliveryAddress_Id"
+;
+
+DROP INDEX IF EXISTS dbo."Orders_IX_DeliveryAddress_Id"
+;
+
+DROP INDEX IF EXISTS dbo."Users_IX_ContactAddress_Id"
+;
+
+DROP INDEX IF EXISTS dbo."Users_IX_DeliveryAddress_Id"
+;
+
+ALTER TABLE "dbo"."Orders" ADD "DeliveryAddress_Country" text
+;
+
+ALTER TABLE "dbo"."Orders" ADD "DeliveryAddress_State" text
+;
+
+ALTER TABLE "dbo"."Orders" ADD "DeliveryAddress_City" text
+;
+
+ALTER TABLE "dbo"."Orders" ADD "DeliveryAddress_Street" text
+;
+
+ALTER TABLE "dbo"."Orders" ADD "DeliveryAddress_Zip" text
+;
+
+ALTER TABLE "dbo"."Orders" ADD "DeliveryAddress_UserId" uuid NOT NULL DEFAULT '00000000-0000-0000-0000-000000000000'
+;
+
+ALTER TABLE "dbo"."Users" ADD "ContactAddress_Country" text
+;
+
+ALTER TABLE "dbo"."Users" ADD "ContactAddress_State" text
+;
+
+ALTER TABLE "dbo"."Users" ADD "ContactAddress_City" text
+;
+
+ALTER TABLE "dbo"."Users" ADD "ContactAddress_Street" text
+;
+
+ALTER TABLE "dbo"."Users" ADD "ContactAddress_Zip" text
+;
+
+ALTER TABLE "dbo"."Users" ADD "ContactAddress_UserId" uuid NOT NULL DEFAULT '00000000-0000-0000-0000-000000000000'
+;
+
+ALTER TABLE "dbo"."Users" ADD "DeliveryAddress_Country" text
+;
+
+ALTER TABLE "dbo"."Users" ADD "DeliveryAddress_State" text
+;
+
+ALTER TABLE "dbo"."Users" ADD "DeliveryAddress_City" text
+;
+
+ALTER TABLE "dbo"."Users" ADD "DeliveryAddress_Street" text
+;
+
+ALTER TABLE "dbo"."Users" ADD "DeliveryAddress_Zip" text
+;
+
+ALTER TABLE "dbo"."Users" ADD "DeliveryAddress_UserId" uuid NOT NULL DEFAULT '00000000-0000-0000-0000-000000000000'
+;
+
+ALTER TABLE "dbo"."Orders" DROP COLUMN "DeliveryAddress_Id"
+;
+
+ALTER TABLE "dbo"."Users" DROP COLUMN "ContactAddress_Id"
+;
+
+ALTER TABLE "dbo"."Users" DROP COLUMN "DeliveryAddress_Id"
+;
+
+DROP TABLE "dbo"."Addresses"
+;
+
+INSERT INTO "dbo"."__MigrationHistory"("MigrationId","ContextKey","Model","ProductVersion") VALUES (E'201509220928345_ChangeAddress',E'OnlineNative.Repositories.Migrations.Configuration',decode('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', 'base64'),E'6.1.3-40302')

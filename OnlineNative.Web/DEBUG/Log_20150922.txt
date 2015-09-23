@@ -1,0 +1,236 @@
+
+异常时间：2015-09-22 16:14:17,600 [12] 
+异常级别：ERROR  
+异常类：OnlineNative.Logger [(null)]  
+Exception caught 
+ System.InvalidOperationException: No Entity Framework provider found for the ADO.NET provider with invariant name 'System.Data.SqlClient'. Make sure the provider is registered in the 'entityFramework' section of the application config file. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information.
+   在 System.Data.Entity.Infrastructure.DependencyResolution.DefaultProviderServicesResolver.GetService(Type type, Object key)
+   在 System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   在 System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   在 System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   在 System.Data.Entity.Infrastructure.DependencyResolution.RootDependencyResolver.GetService(Type type, Object key)
+   在 System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   在 System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   在 System.Data.Entity.Infrastructure.DependencyResolution.CompositeResolver`2.GetService(Type type, Object key)
+   在 System.Data.Entity.Infrastructure.DependencyResolution.DbDependencyResolverExtensions.GetService[T](IDbDependencyResolver resolver, Object key)
+   在 System.Data.Entity.Infrastructure.DefaultManifestTokenResolver.<>c__DisplayClass1.<ResolveManifestToken>b__0(Tuple`3 k)
+   在 System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   在 System.Data.Entity.Utilities.DbConnectionExtensions.GetProviderInfo(DbConnection connection, DbProviderManifest& providerManifest)
+   在 System.Data.Entity.DbModelBuilder.Build(DbConnection providerConnection)
+   在 System.Data.Entity.Internal.LazyInternalContext.CreateModel(LazyInternalContext internalContext)
+   在 System.Data.Entity.Internal.RetryLazy`2.GetValue(TInput input)
+   在 System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   在 System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   在 System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   在 System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   在 OnlineNative.Repositories.EntityFrameworkRepository`1.GetByExpression(Expression`1 expression) 位置 e:\GitHub\OnlineNative.Domain\OnlineNative.Repositories\EntityFramework\EntityFrameworkRepository.cs:行号 100
+   在 OnlineNative.Service.ServiceImplementations.UserServiceImp.GetUserByLoginAccount(String loginAccount) 位置 e:\GitHub\OnlineNative.Domain\OnlineNative.Service\ServiceImplementations\UserServiceImp.cs:行号 233
+   在 DynamicModule.ns.Wrapped_IUserService_e35da9ffab3f47a4bfbce9863a3490e4.<GetUserByLoginAccount_DelegateImplementation>__9(IMethodInvocation inputs, GetNextInterceptionBehaviorDelegate getNext)
+
+异常时间：2015-09-22 16:19:19,865 [13] 
+异常级别：ERROR  
+异常类：OnlineNative.Logger [(null)]  
+Exception caught 
+ System.InvalidOperationException: The Entity Framework provider type 'Npgsql.NpgsqlServices, Npgsql.EntityFramework' registered in the application config file for the ADO.NET provider with invariant name 'Npgsql' could not be loaded. Make sure that the assembly-qualified name is used and that the assembly is available to the running application. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information.
+   在 System.Data.Entity.Infrastructure.DependencyResolution.ProviderServicesFactory.GetInstance(String providerTypeName, String providerInvariantName)
+   在 System.Data.Entity.Internal.AppConfig.<.ctor>b__2(ProviderElement e)
+   在 System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 System.Lazy`1.CreateValue()
+   在 System.Lazy`1.LazyInitValue()
+   在 System.Data.Entity.Infrastructure.DependencyResolution.AppConfigDependencyResolver.RegisterDbProviderServices()
+   在 System.Data.Entity.Infrastructure.DependencyResolution.AppConfigDependencyResolver.GetServiceFactory(Type type, String name)
+   在 System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   在 System.Data.Entity.Infrastructure.DependencyResolution.AppConfigDependencyResolver.GetService(Type type, Object key)
+   在 System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   在 System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   在 System.Data.Entity.Infrastructure.DependencyResolution.CompositeResolver`2.GetService(Type type, Object key)
+   在 System.Data.Entity.Infrastructure.DependencyResolution.DbDependencyResolverExtensions.GetService[T](IDbDependencyResolver resolver)
+   在 System.Data.Entity.DbContext.InitializeLazyInternalContext(IInternalConnection internalConnection, DbCompiledModel model)
+   在 OnlineNative.Repositories.OnlineNativeDbContext..ctor() 位置 e:\GitHub\OnlineNative.Domain\OnlineNative.Repositories\EntityFramework\OnlineNativeDbContext.cs:行号 33
+   在 OnlineNative.Repositories.EntityFramework.EntityFrameworkRepositoryContext.<.ctor>b__0() 位置 e:\GitHub\OnlineNative.Domain\OnlineNative.Repositories\EntityFramework\EntityFrameworkRepositoryContext.cs:行号 17
+   在 System.Threading.ThreadLocal`1.GetValueSlow()
+   在 OnlineNative.Repositories.EntityFramework.EntityFrameworkRepositoryContext.get_DbContext() 位置 e:\GitHub\OnlineNative.Domain\OnlineNative.Repositories\EntityFramework\EntityFrameworkRepositoryContext.cs:行号 20
+   在 OnlineNative.Repositories.EntityFrameworkRepository`1.GetByExpression(Expression`1 expression) 位置 e:\GitHub\OnlineNative.Domain\OnlineNative.Repositories\EntityFramework\EntityFrameworkRepository.cs:行号 100
+   在 OnlineNative.Service.ServiceImplementations.UserServiceImp.GetUserByLoginAccount(String loginAccount) 位置 e:\GitHub\OnlineNative.Domain\OnlineNative.Service\ServiceImplementations\UserServiceImp.cs:行号 233
+   在 DynamicModule.ns.Wrapped_IUserService_a8a3fe5a1b17487dbdb34de41a8f63d7.<GetUserByLoginAccount_DelegateImplementation>__9(IMethodInvocation inputs, GetNextInterceptionBehaviorDelegate getNext)
+
+异常时间：2015-09-22 16:19:28,968 [17] 
+异常级别：ERROR  
+异常类：OnlineNative.Logger [(null)]  
+Exception caught 
+ System.InvalidOperationException: The Entity Framework provider type 'Npgsql.NpgsqlServices, Npgsql.EntityFramework' registered in the application config file for the ADO.NET provider with invariant name 'Npgsql' could not be loaded. Make sure that the assembly-qualified name is used and that the assembly is available to the running application. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information.
+   在 System.Data.Entity.Infrastructure.DependencyResolution.ProviderServicesFactory.GetInstance(String providerTypeName, String providerInvariantName)
+   在 System.Data.Entity.Internal.AppConfig.<.ctor>b__2(ProviderElement e)
+   在 System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 System.Lazy`1.CreateValue()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 System.Lazy`1.get_Value()
+   在 System.Data.Entity.Infrastructure.DependencyResolution.AppConfigDependencyResolver.RegisterDbProviderServices()
+   在 System.Data.Entity.Infrastructure.DependencyResolution.AppConfigDependencyResolver.GetServiceFactory(Type type, String name)
+   在 System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   在 System.Data.Entity.Infrastructure.DependencyResolution.AppConfigDependencyResolver.GetService(Type type, Object key)
+   在 System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   在 System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   在 System.Data.Entity.Infrastructure.DependencyResolution.CompositeResolver`2.GetService(Type type, Object key)
+   在 System.Data.Entity.Infrastructure.DependencyResolution.DbDependencyResolverExtensions.GetService[T](IDbDependencyResolver resolver)
+   在 System.Data.Entity.DbContext.InitializeLazyInternalContext(IInternalConnection internalConnection, DbCompiledModel model)
+   在 OnlineNative.Repositories.OnlineNativeDbContext..ctor() 位置 e:\GitHub\OnlineNative.Domain\OnlineNative.Repositories\EntityFramework\OnlineNativeDbContext.cs:行号 33
+   在 OnlineNative.Repositories.EntityFramework.EntityFrameworkRepositoryContext.<.ctor>b__0() 位置 e:\GitHub\OnlineNative.Domain\OnlineNative.Repositories\EntityFramework\EntityFrameworkRepositoryContext.cs:行号 17
+   在 System.Threading.ThreadLocal`1.GetValueSlow()
+   在 OnlineNative.Repositories.EntityFramework.EntityFrameworkRepositoryContext.get_DbContext() 位置 e:\GitHub\OnlineNative.Domain\OnlineNative.Repositories\EntityFramework\EntityFrameworkRepositoryContext.cs:行号 20
+   在 OnlineNative.Repositories.EntityFrameworkRepository`1.GetByExpression(Expression`1 expression) 位置 e:\GitHub\OnlineNative.Domain\OnlineNative.Repositories\EntityFramework\EntityFrameworkRepository.cs:行号 100
+   在 OnlineNative.Service.ServiceImplementations.UserServiceImp.GetUserByLoginAccount(String loginAccount) 位置 e:\GitHub\OnlineNative.Domain\OnlineNative.Service\ServiceImplementations\UserServiceImp.cs:行号 233
+   在 DynamicModule.ns.Wrapped_IUserService_a8a3fe5a1b17487dbdb34de41a8f63d7.<GetUserByLoginAccount_DelegateImplementation>__9(IMethodInvocation inputs, GetNextInterceptionBehaviorDelegate getNext)
+
+异常时间：2015-09-22 16:21:14,157 [20] 
+异常级别：ERROR  
+异常类：OnlineNative.Logger [(null)]  
+Exception caught 
+ System.InvalidOperationException: The Entity Framework provider type 'Npgsql.NpgsqlServices, Npgsql.EntityFramework' registered in the application config file for the ADO.NET provider with invariant name 'Npgsql' could not be loaded. Make sure that the assembly-qualified name is used and that the assembly is available to the running application. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information.
+   在 System.Data.Entity.Infrastructure.DependencyResolution.ProviderServicesFactory.GetInstance(String providerTypeName, String providerInvariantName)
+   在 System.Data.Entity.Internal.AppConfig.<.ctor>b__2(ProviderElement e)
+   在 System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   在 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   在 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   在 System.Lazy`1.CreateValue()
+   在 System.Lazy`1.LazyInitValue()
+   在 System.Data.Entity.Infrastructure.DependencyResolution.AppConfigDependencyResolver.RegisterDbProviderServices()
+   在 System.Data.Entity.Infrastructure.DependencyResolution.AppConfigDependencyResolver.GetServiceFactory(Type type, String name)
+   在 System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   在 System.Data.Entity.Infrastructure.DependencyResolution.AppConfigDependencyResolver.GetService(Type type, Object key)
+   在 System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   在 System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   在 System.Data.Entity.Infrastructure.DependencyResolution.CompositeResolver`2.GetService(Type type, Object key)
+   在 System.Data.Entity.Infrastructure.DependencyResolution.DbDependencyResolverExtensions.GetService[T](IDbDependencyResolver resolver)
+   在 System.Data.Entity.DbContext.InitializeLazyInternalContext(IInternalConnection internalConnection, DbCompiledModel model)
+   在 OnlineNative.Repositories.OnlineNativeDbContext..ctor() 位置 e:\GitHub\OnlineNative.Domain\OnlineNative.Repositories\EntityFramework\OnlineNativeDbContext.cs:行号 33
+   在 OnlineNative.Repositories.EntityFramework.EntityFrameworkRepositoryContext.<.ctor>b__0() 位置 e:\GitHub\OnlineNative.Domain\OnlineNative.Repositories\EntityFramework\EntityFrameworkRepositoryContext.cs:行号 17
+   在 System.Threading.ThreadLocal`1.GetValueSlow()
+   在 OnlineNative.Repositories.EntityFramework.EntityFrameworkRepositoryContext.get_DbContext() 位置 e:\GitHub\OnlineNative.Domain\OnlineNative.Repositories\EntityFramework\EntityFrameworkRepositoryContext.cs:行号 20
+   在 OnlineNative.Repositories.EntityFrameworkRepository`1.GetByExpression(Expression`1 expression) 位置 e:\GitHub\OnlineNative.Domain\OnlineNative.Repositories\EntityFramework\EntityFrameworkRepository.cs:行号 100
+   在 OnlineNative.Service.ServiceImplementations.UserServiceImp.GetUserByLoginAccount(String loginAccount) 位置 e:\GitHub\OnlineNative.Domain\OnlineNative.Service\ServiceImplementations\UserServiceImp.cs:行号 233
+   在 DynamicModule.ns.Wrapped_IUserService_6bd688ed25814d708f6d452a9ee9a760.<GetUserByLoginAccount_DelegateImplementation>__9(IMethodInvocation inputs, GetNextInterceptionBehaviorDelegate getNext)
+
+异常时间：2015-09-22 16:58:32,197 [78] 
+异常级别：ERROR  
+异常类：OnlineNative.Logger [(null)]  
+Exception caught 
+ AutoMapper.AutoMapperMappingException: 
+
+Mapping types:
+UserDto -> Address
+OnlineNative.Model.DTOs.UserDto -> OnlineNative.Domain.Model.Address
+
+Destination path:
+User.ContactAddress.ContactAddress
+
+Source value:
+yinguilong ---> System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 OnlineNative.Web.App_Start.AddressResolver.ResolveCore(AddressDto source) 位置 e:\GitHub\OnlineNative.Domain\OnlineNative.Web\App_Start\AddressResolver.cs:行号 15
+   在 AutoMapper.ValueResolver`2.Resolve(ResolutionResult source) 位置 c:\dev\AutoMapper\src\AutoMapper\ValueResolver.cs:行号 12
+   在 System.Linq.Enumerable.Aggregate[TSource,TAccumulate](IEnumerable`1 source, TAccumulate seed, Func`3 func)
+   在 AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.MapPropertyValue(ResolutionContext context, IMappingEngineRunner mapper, Object mappedObject, PropertyMap propertyMap) 位置 c:\dev\AutoMapper\src\AutoMapper\Mappers\TypeMapObjectMapperRegistry.cs:行号 116
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.MapPropertyValue(ResolutionContext context, IMappingEngineRunner mapper, Object mappedObject, PropertyMap propertyMap) 位置 c:\dev\AutoMapper\src\AutoMapper\Mappers\TypeMapObjectMapperRegistry.cs:行号 153
+   在 AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.Map(ResolutionContext context, IMappingEngineRunner mapper) 位置 c:\dev\AutoMapper\src\AutoMapper\Mappers\TypeMapObjectMapperRegistry.cs:行号 89
+   在 AutoMapper.Mappers.TypeMapMapper.Map(ResolutionContext context, IMappingEngineRunner mapper) 位置 c:\dev\AutoMapper\src\AutoMapper\Mappers\TypeMapMapper.cs:行号 22
+   在 AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context) 位置 c:\dev\AutoMapper\src\AutoMapper\MappingEngine.cs:行号 250
+   在 AutoMapper.MappingEngine.Map[TSource,TDestination](TSource source) 位置 c:\dev\AutoMapper\src\AutoMapper\MappingEngine.cs:行号 78
+   在 OnlineNative.Service.ApplicationService.PerformCreateObjects[TDtoList,TDto,TAggregateRoot](TDtoList dataTransferObjects, IRepository`1 repository, Action`1 processDto, Action`1 processAggregateRoot) 位置 e:\GitHub\OnlineNative.Domain\OnlineNative.Service\ApplicationService.cs:行号 71
+   在 OnlineNative.Service.ServiceImplementations.UserServiceImp.CreateUsers(List`1 userDtos) 位置 e:\GitHub\OnlineNative.Domain\OnlineNative.Service\ServiceImplementations\UserServiceImp.cs:行号 56
+   在 DynamicModule.ns.Wrapped_IUserService_658175efeb0b42bca9b245cc4d60e82c.<CreateUsers_DelegateImplementation>__0(IMethodInvocation inputs, GetNextInterceptionBehaviorDelegate getNext)
+
+异常时间：2015-09-22 17:04:17,086 [78] 
+异常级别：ERROR  
+异常类：OnlineNative.Logger [(null)]  
+Exception caught 
+ System.Data.Entity.Validation.DbEntityValidationException: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 OnlineNative.Repositories.EntityFramework.EntityFrameworkRepositoryContext.Commit() 位置 e:\GitHub\OnlineNative.Domain\OnlineNative.Repositories\EntityFramework\EntityFrameworkRepositoryContext.cs:行号 52
+   在 OnlineNative.Service.ApplicationService.PerformCreateObjects[TDtoList,TDto,TAggregateRoot](TDtoList dataTransferObjects, IRepository`1 repository, Action`1 processDto, Action`1 processAggregateRoot) 位置 e:\GitHub\OnlineNative.Domain\OnlineNative.Service\ApplicationService.cs:行号 78
+   在 OnlineNative.Service.ServiceImplementations.UserServiceImp.CreateUsers(List`1 userDtos) 位置 e:\GitHub\OnlineNative.Domain\OnlineNative.Service\ServiceImplementations\UserServiceImp.cs:行号 56
+   在 DynamicModule.ns.Wrapped_IUserService_803e1d31fb614d3c88d5d96dc4689422.<CreateUsers_DelegateImplementation>__0(IMethodInvocation inputs, GetNextInterceptionBehaviorDelegate getNext)
+
+异常时间：2015-09-22 17:10:27,471 [74] 
+异常级别：ERROR  
+异常类：OnlineNative.Logger [(null)]  
+Exception caught 
+ System.InvalidOperationException: The model backing the 'OnlineNativeDbContext' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+   在 System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)
+   在 System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   在 System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   在 System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   在 System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   在 System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   在 System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   在 System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   在 System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   在 OnlineNative.Repositories.EntityFrameworkRepository`1.GetByExpression(Expression`1 expression) 位置 e:\GitHub\OnlineNative.Domain\OnlineNative.Repositories\EntityFramework\EntityFrameworkRepository.cs:行号 100
+   在 OnlineNative.Service.ServiceImplementations.UserServiceImp.GetUserByLoginAccount(String loginAccount) 位置 e:\GitHub\OnlineNative.Domain\OnlineNative.Service\ServiceImplementations\UserServiceImp.cs:行号 233
+   在 DynamicModule.ns.Wrapped_IUserService_bded6090d31248eeb5df1d26e8024a01.<GetUserByLoginAccount_DelegateImplementation>__9(IMethodInvocation inputs, GetNextInterceptionBehaviorDelegate getNext)
+
+异常时间：2015-09-22 17:16:49,523 [78] 
+异常级别：ERROR  
+异常类：OnlineNative.Logger [(null)]  
+Exception caught 
+ System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> Npgsql.NpgsqlException: 错误: 23505: 重复键违反唯一约束"PK_dbo.Addresses"
+   在 Npgsql.NpgsqlState.<ProcessBackendResponses>d__0.MoveNext()
+   在 Npgsql.ForwardsOnlyDataReader.GetNextResponseObject(Boolean cleanup)
+   在 Npgsql.ForwardsOnlyDataReader.GetNextRowDescription()
+   在 Npgsql.ForwardsOnlyDataReader.NextResultInternal()
+   在 Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean preparedStatement, NpgsqlRowDescription rowDescription)
+   在 Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb)
+   在 Npgsql.NpgsqlCommand.ExecuteNonQuery()
+   在 System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.NonQuery(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   在 System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)
+   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 OnlineNative.Repositories.EntityFramework.EntityFrameworkRepositoryContext.Commit() 位置 e:\GitHub\OnlineNative.Domain\OnlineNative.Repositories\EntityFramework\EntityFrameworkRepositoryContext.cs:行号 52
+   在 OnlineNative.Service.ApplicationService.PerformCreateObjects[TDtoList,TDto,TAggregateRoot](TDtoList dataTransferObjects, IRepository`1 repository, Action`1 processDto, Action`1 processAggregateRoot) 位置 e:\GitHub\OnlineNative.Domain\OnlineNative.Service\ApplicationService.cs:行号 78
+   在 OnlineNative.Service.ServiceImplementations.UserServiceImp.CreateUsers(List`1 userDtos) 位置 e:\GitHub\OnlineNative.Domain\OnlineNative.Service\ServiceImplementations\UserServiceImp.cs:行号 56
+   在 DynamicModule.ns.Wrapped_IUserService_2b7064a663ed4cf9a7e51101245a4c9d.<CreateUsers_DelegateImplementation>__0(IMethodInvocation inputs, GetNextInterceptionBehaviorDelegate getNext)
+
+异常时间：2015-09-22 17:22:00,409 [62] 
+异常级别：ERROR  
+异常类：OnlineNative.Logger [(null)]  
+Exception caught 
+ System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> Npgsql.NpgsqlException: 错误: 23505: 重复键违反唯一约束"PK_dbo.Addresses"
+   在 Npgsql.NpgsqlState.<ProcessBackendResponses>d__0.MoveNext()
+   在 Npgsql.ForwardsOnlyDataReader.GetNextResponseObject(Boolean cleanup)
+   在 Npgsql.ForwardsOnlyDataReader.GetNextRowDescription()
+   在 Npgsql.ForwardsOnlyDataReader.NextResultInternal()
+   在 Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean preparedStatement, NpgsqlRowDescription rowDescription)
+   在 Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb)
+   在 Npgsql.NpgsqlCommand.ExecuteNonQuery()
+   在 System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   在 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.NonQuery(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   在 System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)
+   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 OnlineNative.Repositories.EntityFramework.EntityFrameworkRepositoryContext.Commit() 位置 e:\GitHub\OnlineNative.Domain\OnlineNative.Repositories\EntityFramework\EntityFrameworkRepositoryContext.cs:行号 52
+   在 OnlineNative.Service.ApplicationService.PerformCreateObjects[TDtoList,TDto,TAggregateRoot](TDtoList dataTransferObjects, IRepository`1 repository, Action`1 processDto, Action`1 processAggregateRoot) 位置 e:\GitHub\OnlineNative.Domain\OnlineNative.Service\ApplicationService.cs:行号 78
+   在 OnlineNative.Service.ServiceImplementations.UserServiceImp.CreateUsers(List`1 userDtos) 位置 e:\GitHub\OnlineNative.Domain\OnlineNative.Service\ServiceImplementations\UserServiceImp.cs:行号 56
+   在 DynamicModule.ns.Wrapped_IUserService_fa188d2d91584371acc6ad9decc6ad72.<CreateUsers_DelegateImplementation>__0(IMethodInvocation inputs, GetNextInterceptionBehaviorDelegate getNext)

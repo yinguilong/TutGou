@@ -28,9 +28,9 @@ namespace OnlineNative.Repositories.EntityFramework
         {
         }
 
-        public bool CheckPassword(string userName, string password)
+        public bool CheckPassword(string loginAccount, string password)
         {
-            Expression<Func<User, bool>> userNameExpression = u => u.UserName == userName;
+            Expression<Func<User, bool>> userNameExpression = u => u.UserName == loginAccount;
             Expression<Func<User, bool>> passwordExpression = u => u.Password == password;
 
             return Exists(new ExpressionSpecification<User>(userNameExpression.And(passwordExpression)));

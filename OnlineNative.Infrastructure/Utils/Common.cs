@@ -28,9 +28,15 @@ namespace OnlineNative.Infrastructure.Utils
     public class Common
     {
         #region Private Fields
-        private static readonly log4net.ILog log = log4net.LogManager.GetLogger("OnlineNative.Logger");
+        private static readonly log4net.ILog log;
         #endregion
 
+        static Common()
+        {
+            string strLog4netConfigPath = AppDomain.CurrentDomain.BaseDirectory + @"\Log4Net.config";
+            log4net.Config.XmlConfigurator.ConfigureAndWatch(new System.IO.FileInfo(strLog4netConfigPath));
+            log = log4net.LogManager.GetLogger("OnlineNative.Logger");
+        }
         #region Public Static Methods
         /// <summary>
         /// 将指定的字符串信息写入日志。
@@ -63,6 +69,6 @@ namespace OnlineNative.Infrastructure.Utils
             var smtpClient = new SmtpClient();
             smtpClient.Send(msg);
         }
-        #endregion 
+        #endregion
     }
 }

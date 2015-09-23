@@ -36,13 +36,13 @@
                 {
                     <div>
                         <span>用户昵称：</span>
-                        <input type="text" value="用户昵称" id="UserName" name="UserName" onfocus="this.value = '';" onblur="    if (this.value == '') { this.value = '用户昵称'; }" />
+                        <input type="text" value="用户昵称" id="UserName" maxlength="20" name="UserName" onfocus="this.value = '';" onblur="    if (this.value == '') { this.value = '用户昵称'; }" />
                         <div id="UserNameTip" style="width: auto"></div>
                     </div>
                     <div class="clearfix"> </div>
                     <div>
                         <span>账号：</span>
-                        <input type="text" value="手机号或邮箱" id="txtAccount" name="LoginAccount" onfocus="this.value = '';" onblur="    if (this.value == '') { this.value = '手机号或邮箱'; }">
+                        <input type="text" value="手机号或邮箱" maxlength="30" id="txtAccount" name="LoginAccount" onfocus="this.value = '';" onblur="    if (this.value == '') { this.value = '手机号或邮箱'; }">
                         <div id="txtAccountTip" style="width: auto"></div>
                     </div>
                     <div class="clearfix"> </div>
@@ -59,7 +59,7 @@
                     </div>
                     <div class="clearfix"> </div>
                     <div class="send">
-                        <button type="button" class="btn btn-success" id="btnSave" onclick="">注册</button>
+                        <button type="button" class="btn btn-success" id="btnSave" onclick="$('#form1').submit()">注册</button>
                         &nbsp;&nbsp;&nbsp;
                         <button type="button" class="btn btn-danger" onclick="">已有账号</button>
                     </div>
@@ -111,11 +111,11 @@
                             return true;
                         }
                         else {
-                            return "帐号验证失败，请填写与选择的类型相符的帐号";
+                            return "帐号验证失败，请填写手机号或邮箱";
                         }
                     }
                     if (json == "false") {
-                        return "账号不可用，请更换";
+                        return "账号已被注册";
                     }
                     return json;
                 },
@@ -123,7 +123,7 @@
                 onWait: "正在对帐号进行合法性校验，请稍候..."
             });
             $("#passWord").formValidator({ onShow: "请输入密码", onCorrect: "谢谢你的合作" }).inputValidator({ min: 6, max: 18, empty: { leftEmpty: false, rightEmpty: false, emptyError: "密码两边不能有空符号" }, onError: "密码为6-18位,请确认" });
-            $("#comparePassWord").formValidator({ onShow: "请输入密码", onCorrect: "密码一至" }).inputValidator({ min: 6, max: 18, empty: { leftEmpty: false, rightEmpty: false, emptyError: "密码两边不能有空符号" }, onError: "密码为6-18位,请确认" }).compareValidator({ desid: "passWord", operateor: "=", onerror: "2次密码不一致, 请确认" });
+            $("#comparePassWord").formValidator({ onFocus:"请确认密码", onCorrect: "密码一至" }).inputValidator({ min: 6, max: 18, empty: { leftEmpty: false, rightEmpty: false, emptyError: "密码两边不能有空符号" }, onError: "密码为6-18位,请确认" }).compareValidator({ desID: "passWord", operateor: "=", onError: "2次密码不一致, 请确认" });
             $("#UserName").formValidator({ onShow: "请输入昵称", onCorrect: "谢谢你的合作，昵称填写正确" }).inputValidator({ max: 18, empty: { leftEmpty: false, rightEmpty: false, emptyError: "用户名不能有空符号" }, onError: "用户名太长了！" });
             //    .ajaxValidator({
             //    async: true,
