@@ -49,14 +49,12 @@ E:\GitHub\OnlineNative.Domain\OnlineNative.Infrastructure\bin\Debug\Microsoft.Pr
 E:\GitHub\OnlineNative.Domain\OnlineNative.Infrastructure\bin\Debug\Microsoft.Practices.Unity.dll
 E:\GitHub\OnlineNative.Domain\OnlineNative.Infrastructure\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.dll
 E:\GitHub\OnlineNative.Domain\OnlineNative.Infrastructure\bin\Debug\Microsoft.Web.Infrastructure.dll
-E:\GitHub\OnlineNative.Domain\OnlineNative.Infrastructure\bin\Debug\OnlineNative.Model.dll
 E:\GitHub\OnlineNative.Domain\OnlineNative.Infrastructure\bin\Debug\System.Web.Helpers.dll
 E:\GitHub\OnlineNative.Domain\OnlineNative.Infrastructure\bin\Debug\System.Web.Mvc.dll
 E:\GitHub\OnlineNative.Domain\OnlineNative.Infrastructure\bin\Debug\System.Web.Razor.dll
 E:\GitHub\OnlineNative.Domain\OnlineNative.Infrastructure\bin\Debug\System.Web.WebPages.Deployment.dll
 E:\GitHub\OnlineNative.Domain\OnlineNative.Infrastructure\bin\Debug\System.Web.WebPages.dll
 E:\GitHub\OnlineNative.Domain\OnlineNative.Infrastructure\bin\Debug\System.Web.WebPages.Razor.dll
-E:\GitHub\OnlineNative.Domain\OnlineNative.Infrastructure\bin\Debug\OnlineNative.Model.pdb
 E:\GitHub\OnlineNative.Domain\OnlineNative.Infrastructure\bin\Debug\log4net.xml
 E:\GitHub\OnlineNative.Domain\OnlineNative.Infrastructure\bin\Debug\Memcached.Client.xml
 E:\GitHub\OnlineNative.Domain\OnlineNative.Infrastructure\bin\Debug\Microsoft.Practices.Unity.xml

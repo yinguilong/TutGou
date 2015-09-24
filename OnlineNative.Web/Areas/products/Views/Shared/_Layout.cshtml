@@ -15,7 +15,6 @@
 <body>
     <div class="container">
         <div class="header">
-
             <div class="header-top">
                 <div class="logo">
                     <a href="index.html"><img src="/Content/images/logo.png" alt="" /></a>
@@ -30,21 +29,14 @@
             </div>
             <div class="top-nav">
                 <span class="menu"><img src="/Content/images/menu.png" alt="">  </span>
-                <ul>
-                    <li ><a href="http://www.tutgou.com"> 主页 </a></li>
-                    <li ><a href="about.html"> 最新 </a></li>
-                    <li class="active"><a href="/tutechan-liebiao">商品</a></li>
-                    <li><a href="contact.html">联系我们</a></li>
+                <ul id="ul_nav">
+                    <li data-litype="home"><a href="http://www.tutgou.com"> 主页 </a></li>
+                    <li data-litype="new"><a href="about.html"> 最新 </a></li>
+                    <li data-litype="shangpin" class="active"><a href="/tutechan-liebiao">商品</a></li>
+                    <li  data-litype="my"><a href="/users/users/Index">我的TutGou</a></li>
                     <div class="clearfix"></div>
                 </ul>
-                <script>
-                    $("span.menu").click(function () {
-                        $(".top-nav ul").slideToggle(500, function () {
-                        });
-                    });
-                </script>
             </div>
-
         </div>
         @RenderBody()
         <div class="footer">
@@ -52,12 +44,12 @@
             <!--//newsletter-->
             <div class="footer-top-top">
                 @*<div class="col-md-4">
-                    <ul class="social">
-                        <li><a href="#"><i> </i></a></li>
-                        <li><a href="#"><i class="twitter"> </i></a></li>
-                        <li><a href="#"><i class="google"> </i></a></li>
-                    </ul>
-                </div>*@
+                        <ul class="social">
+                            <li><a href="#"><i> </i></a></li>
+                            <li><a href="#"><i class="twitter"> </i></a></li>
+                            <li><a href="#"><i class="google"> </i></a></li>
+                        </ul>
+                    </div>*@
                 <div class="col-md-12 footer-top">
                     <p class="footer-class">Copyright &copy; 2015.Company name All rights reserved.</p>
                 </div>
@@ -70,6 +62,11 @@
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/templatemo")
     @RenderSection("scripts", required: false)
-
+    <script type="text/javascript">
+        function AddActiveClass(type) {
+            $("#ul_nav li[data-litype='" + type + "']").addClass("active");
+            $("#ul_nav li[data-litype='" + type + "']").removeClass("active");
+        }
+    </script>
 </body>
 </html>

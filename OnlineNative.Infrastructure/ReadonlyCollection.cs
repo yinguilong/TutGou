@@ -23,13 +23,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OnlineNative.Model
+namespace OnlineNative.Infrastructure
 {
     public class ReadonlyCollection
     {
         public static readonly string CLIENTSESSIONNAME = "ClientSessionName_OnlineNative_User";
         public static readonly string CLIENTSESSIONNAMECOOKIEVALUE = "SessionName_OnlineNative_User";
         public static readonly string SERVERBEFOREKEY = "CustomUserSession_OnlineNative_";
-        public static readonly string ROOTDOMAIN = ConfigurationManager.AppSettings["RootDomain"]; 
+        public static readonly string ROOTDOMAIN = ConfigurationManager.AppSettings["RootDomain"];
     }
 }

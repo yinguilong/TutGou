@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>特产专卖-一个专卖土特产的网站</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="一个专卖土特产的网站" />
+    <meta name="author" content="tutgou">
+    <meta name="keywords" content="迁西 板栗，新鲜 土特产，专卖" />
+    <!-- CSS Bootstrap & Custom -->
+    @Styles.Render("~/Content/bootstrapcss")
+    @Styles.Render("~/Content/templatemo")
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="index.html"><img src="/Content/images/logo.png" alt="" /></a>
+                </div>
+                <div class="search">
+                    <form>
+                        <input type="text" value=" Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
+                        <input type="submit" value="">
+                    </form>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="top-nav">
+                <span class="menu"><img src="/Content/images/menu.png" alt="">  </span>
+                <ul>
+                    <li><a href="http://www.tutgou.com"> 主页 </a></li>
+                    <li><a href="about.html"> 最新 </a></li>
+                    <li><a href="/tutechan-liebiao">商品</a></li>
+                    <li class="active"><a href="/users/users/Index">我的TutGou</a></li>
+                    <div class="clearfix"></div>
+                </ul>
+            </div>
+        </div>
+        @RenderBody()
+        <div class="footer">
+            <!--newsletter-->
+            <!--//newsletter-->
+            <div class="footer-top-top">
+                @*<div class="col-md-4">
+                        <ul class="social">
+                            <li><a href="#"><i> </i></a></li>
+                            <li><a href="#"><i class="twitter"> </i></a></li>
+                            <li><a href="#"><i class="google"> </i></a></li>
+                        </ul>
+                    </div>*@
+                <div class="col-md-12 footer-top">
+                    <p class="footer-class">Copyright &copy; 2015.Company name All rights reserved.</p>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!-- JavaScripts -->
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/templatemo")
+    @RenderSection("scripts", required: false)
+    <script>
+        $("span.menu").click(function () {
+            $(".top-nav ul").slideToggle(500, function () {
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        function AddActiveClass(type) {
+            $("#ul_nav li[data-litype='" + type + "']").addClass("active");
+            $("#ul_nav li[data-litype='" + type + "']").removeClass("active");
+        }
+    </script>
+
+
+
+</body>
+</html>

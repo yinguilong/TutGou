@@ -34,5 +34,16 @@ namespace OnlineNative.Web
             }
             return contentResult;
         }
+        /// <summary>
+        /// 判断是否有账号的cookie
+        /// </summary>
+        public bool IsHaveAccount
+        {
+
+            get
+            {
+                return !string.IsNullOrWhiteSpace(CustomUserSession.SessionId);
+            }
+        }
     }
 }

@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "UserHaveRegisted";
+    Layout = "~/Areas/users/Views/Shared/_Layout.cshtml";
+}
+
+<!--content-->
+<div class="contact-grid">
+    <div class="col-sm-12 blog-main" id="divArticle">
+        <div class="alert alert-info" role="alert">
+            <strong>欢迎您！ @(ViewData["userName"])</strong>点击  <a href="http://www.tutgou.com" class="alert-danger">这里</a>回到首页
+        </div>
+    </div>
+</div><!--//content-->
+<script type="text/javascript">
+    $(function () {
+        AddActiveClass("my");
+    })
+</script>

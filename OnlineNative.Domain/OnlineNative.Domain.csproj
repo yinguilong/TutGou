@@ -46,6 +46,7 @@
     <Compile Include="AggregateRoot\AggregateRoot.cs" />
     <Compile Include="AggregateRoot\IAggregateRoot.cs" />
     <Compile Include="AggregateRoot\IEntity.cs" />
+    <Compile Include="DomainException.cs" />
     <Compile Include="Event\DomainEvent.cs" />
     <Compile Include="Event\EventHandlers\OrderConfirmedEventHandler.cs" />
     <Compile Include="Event\EventHandlers\OrderDispatchedEventHandler.cs" />

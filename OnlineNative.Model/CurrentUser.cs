@@ -45,6 +45,5 @@ namespace OnlineNative.Model
         /// </summary>
         public string LoginAccount { get; set; }
 
-
     }
 }

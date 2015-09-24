@@ -20,5 +20,11 @@
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/templatemo")
     @RenderSection("scripts", required: false)
+    <script type="text/javascript">
+        function AddActiveClass(type) {
+            $("#ul_nav li[data-litype='" + type + "']").addClass("active");
+            $("#ul_nav li[data-litype='" + type + "']").removeClass("active");
+        }
+    </script>
 </body>
 </html>

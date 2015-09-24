@@ -1,5 +1,4 @@
-﻿using OnlineNative.Model;
-/************************************************************************************
+﻿/************************************************************************************
  * Copyright (c) 2015Microsoft All Rights Reserved.
  * CLR版本： 4.0.30319.0
  *命名空间：OnlineNative.Infrastructure.Extensions

@@ -30,7 +30,6 @@ E:\GitHub\OnlineNative.Domain\OnlineNative.Events\bin\Debug\Memcached.Client.dll
 E:\GitHub\OnlineNative.Domain\OnlineNative.Events\bin\Debug\System.Web.Mvc.dll
 E:\GitHub\OnlineNative.Domain\OnlineNative.Events\bin\Debug\Microsoft.Practices.Unity.dll
 E:\GitHub\OnlineNative.Domain\OnlineNative.Events\bin\Debug\log4net.dll
-E:\GitHub\OnlineNative.Domain\OnlineNative.Events\bin\Debug\OnlineNative.Model.dll
 E:\GitHub\OnlineNative.Domain\OnlineNative.Events\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
 E:\GitHub\OnlineNative.Domain\OnlineNative.Events\bin\Debug\ICSharpCode.SharpZipLib.dll
 E:\GitHub\OnlineNative.Domain\OnlineNative.Events\bin\Debug\OnlineNative.Infrastructure.pdb
@@ -38,7 +37,6 @@ E:\GitHub\OnlineNative.Domain\OnlineNative.Events\bin\Debug\Memcached.Client.xml
 E:\GitHub\OnlineNative.Domain\OnlineNative.Events\bin\Debug\System.Web.Mvc.xml
 E:\GitHub\OnlineNative.Domain\OnlineNative.Events\bin\Debug\Microsoft.Practices.Unity.xml
 E:\GitHub\OnlineNative.Domain\OnlineNative.Events\bin\Debug\log4net.xml
-E:\GitHub\OnlineNative.Domain\OnlineNative.Events\bin\Debug\OnlineNative.Model.pdb
 E:\GitHub\OnlineNative.Domain\OnlineNative.Events\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
 E:\GitHub\OnlineNative.Domain\OnlineNative.Events\obj\Debug\OnlineNative.Events.csprojResolveAssemblyReference.cache
 E:\GitHub\OnlineNative.Domain\OnlineNative.Events\obj\Debug\OnlineNative.Events.dll

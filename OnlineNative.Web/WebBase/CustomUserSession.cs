@@ -6,6 +6,7 @@ using OnlineNative.Model;
 using OnlineNative.Infrastructure;
 using OnlineNative.Infrastructure.Extensions;
 using OnlineNative.Infrastructure.Utils;
+using OnlineNative.Model.DTOs;
 
 namespace OnlineNative.Web
 {
@@ -67,6 +68,15 @@ namespace OnlineNative.Web
                 Common.Log(exp.ToString());
                 return "";
             }
+        }
+        public static CurrentUser GetCurrentUserByTuser(UserDto user)
+        {
+            var currentUser = new CurrentUser();
+            currentUser.SystemLevel = 1;
+            currentUser.LoginAccount = user.LoginAccount;
+            currentUser.UserID = new Guid(user.Id);
+            currentUser.UserName = user.UserName;
+            return currentUser;
         }
         public static void Clear()
         {

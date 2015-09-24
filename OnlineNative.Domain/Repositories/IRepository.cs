@@ -1,4 +1,5 @@
-﻿/************************************************************************************
+﻿using OnlineNative.Infrastructure;
+/************************************************************************************
  * Copyright (c) 2015Microsoft All Rights Reserved.
  * CLR版本： 4.0.30319.0
  *命名空间：OnlineNative.Domain.Repositories
@@ -58,6 +59,25 @@ namespace OnlineNative.Domain
 
         void Update(TAggregateRoot aggregateRoot);
 
+        #region 分页支持
+     
+        PagedResult<TAggregateRoot> GetAll(Expression<Func<TAggregateRoot, dynamic>> sortPredicate,
+            SortOrder sortOrder, int pageNumber, int pageSize);
+
+        PagedResult<TAggregateRoot> GetAll(
+            ISpecification<TAggregateRoot> specification,
+            Expression<Func<TAggregateRoot, dynamic>> sortPredicate,
+            SortOrder sortOrder, int pageNumber, int pageSize);
+
+        PagedResult<TAggregateRoot> GetAll(Expression<Func<TAggregateRoot, dynamic>> sortPredicate,
+            SortOrder sortOrder, int pageNumber, int pageSize,
+            params Expression<Func<TAggregateRoot, dynamic>>[] eagerLoadingProperties);
+
+        PagedResult<TAggregateRoot> GetAll(ISpecification<TAggregateRoot> specification,
+            Expression<Func<TAggregateRoot, dynamic>> sortPredicate,
+            SortOrder sortOrder, int pageNumber, int pageSize,
+            params Expression<Func<TAggregateRoot, dynamic>>[] eagerLoadingProperties);
+        #endregion
         #endregion
         #region 饥饿加载方式
 
