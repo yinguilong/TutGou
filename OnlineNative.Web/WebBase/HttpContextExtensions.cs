@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using OnlineNative.Model;
+using OnlineNative.Infrastructure;
 
 namespace OnlineNative.Web.WebBase
 {

@@ -23,7 +23,7 @@
     <script type="text/javascript">
         function AddActiveClass(type) {
             $("#ul_nav li[data-litype='" + type + "']").addClass("active");
-            $("#ul_nav li[data-litype='" + type + "']").removeClass("active");
+            $("#ul_nav li[data-litype!='" + type + "']").removeClass("active");
         }
     </script>
 </body>

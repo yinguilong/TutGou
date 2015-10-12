@@ -154,7 +154,14 @@ namespace OnlineNative.Service.ServiceImplementations
 
             return Mapper.Map<Order, OrderDto>(order);
         }
-
+        public OrderDto CheckOutByItem(UserDto userDto, List<ShoppingCartItemDto> shopItems)
+        {
+            var user = _userRepository.GetByKey(new Guid(userDto.Id));
+            //var shoppingCart = _shoppingCartRepository.GetByExpression(s => s.User.Id == user.Id);
+            var list = shopItems.ConvertAll(x => { return Mapper.Map<ShoppingCartItemDto, ShoppingCartItem>(x); });
+            var order = _domainService.CreateOrderByItem(user, list);
+            return Mapper.Map<OrderDto>(order);
+        }
         public OrderDto GetOrder(Guid orderId)
         {
             var order = _orderRepository.GetBySpecification(new ExpressionSpecification<Order>(o => o.Id.Equals(orderId)), elp => elp.OrderItems);

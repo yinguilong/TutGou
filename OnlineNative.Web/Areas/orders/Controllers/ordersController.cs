@@ -17,7 +17,6 @@ namespace OnlineNative.Web.Areas.orders.Controllers
         }
         public ActionResult CreateOrders()
         {
-
             return View();
         }
 

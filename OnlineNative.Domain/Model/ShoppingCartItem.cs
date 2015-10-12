@@ -1,4 +1,6 @@
-﻿/************************************************************************************
+﻿using OnlineNative.Domain.Repositories;
+using OnlineNative.Infrastructure;
+/************************************************************************************
  * Copyright (c) 2015Microsoft All Rights Reserved.
  * CLR版本： 4.0.30319.0
  *命名空间：OnlineNative.Domain.Model
@@ -53,7 +55,24 @@ namespace OnlineNative.Domain.Model
             };
             return orderItem;
         }
-
+        /// <summary>
+        /// 根据商品ID和商品数量创建订单项
+        /// </summary>
+        /// <param name="product"></param>
+        /// <param name="quantity"></param>
+        /// <returns></returns>
+        public OrderItem CreateOrderItemByProductId()
+        {
+            var productRepository = ServiceLocator.Instance.GetService<IProductRepository>();
+            var product = productRepository.GetByKey(this.Product.Id);
+            var orderItem = new OrderItem
+            {
+                Id = Guid.NewGuid(),
+                Product = product,
+                Quantity = this.Quantity
+            };
+            return orderItem;
+        }
         public void UpdateQuantity(int quantity)
         {
             this.Quantity = quantity;

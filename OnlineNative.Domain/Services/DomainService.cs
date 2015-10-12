@@ -80,12 +80,42 @@ namespace OnlineNative.Domain.Services
                 _shoppingCartItemRepository.Remove(shoppingCartItem);
             }
             order.User = user;
-            order.Status = DictOrderStatus.已付款;
+            order.Status = DictOrderStatus.创建;//先创建订单，付款需要用到订单号
             _orderRepository.Add(order);
             _repositoryContext.Commit();
             return order;
         }
-
+        /// <summary>
+        /// 下单，没有付款
+        /// </summary>
+        /// <param name="user"></param>
+        /// <param name="shoppingCartItems"></param>
+        /// <returns></returns>
+        public Order CreateOrderByItem(User user, List<ShoppingCartItem> shoppingCartItems)
+        {
+            var order = new Order();
+            if (shoppingCartItems==null||!shoppingCartItems.Any())
+            {
+                throw new InvalidOperationException("购物篮中没有任何物品");
+            }
+            order.OrderItems = new List<OrderItem>();
+            foreach (var shoppingCartItem in shoppingCartItems)
+            {
+                if (shoppingCartItem!=null&&shoppingCartItem.Id!=null)
+                {
+                    var orderItem = shoppingCartItem.CreateOrderItemByProductId();
+                    orderItem.Order = order;
+                    order.OrderItems.Add(orderItem);
+                    _shoppingCartItemRepository.Remove(shoppingCartItem);
+                }
+            }
+            order.User = user;
+            order.Status = DictOrderStatus.创建;//先创建订单，付款需要用到订单号
+            _orderRepository.Add(order);
+            _repositoryContext.Commit();
+            return order;
+            //var shoppingCartItems=shoppingCart.Id
+        }
         // 将指定的商品归类到指定的商品分类中。
         public ProductCategorization Categorize(NativeProduct product, Category category)
         {

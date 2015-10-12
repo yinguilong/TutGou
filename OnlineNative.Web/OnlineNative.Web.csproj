@@ -276,6 +276,7 @@
     <Content Include="Areas\users\Views\users\UserHaveRegisted.cshtml" />
     <Content Include="Areas\users\Views\users\UserLoginLoad.cshtml" />
     <Content Include="Areas\users\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\products\Views\product\productaddload.cshtml" />
     <None Include="Scripts\jquery\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\fresh\jquery.chocolat.js" />
     <Content Include="Scripts\jquery\formValidator-4.1.1.js" />

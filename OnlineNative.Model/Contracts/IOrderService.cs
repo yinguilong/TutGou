@@ -48,5 +48,12 @@ namespace OnlineNative.Model.Contracts
 
         // 确认发货
         void Dispatch(Guid orderId);
+        /// <summary>
+        /// 用户下单，并不是购物车全部
+        /// </summary>
+        /// <param name="user"></param>
+        /// <param name="shopItems"></param>
+        /// <returns></returns>
+        OrderDto CheckOutByItem(UserDto userDto, List<ShoppingCartItemDto> shopItems);
     }
 }

@@ -10,6 +10,13 @@ namespace OnlineNative.Domain.Services
     // 领域服务接口
     public interface IDomainService
     {
+        /// <summary>
+        /// 创建订单
+        /// </summary>
+        /// <param name="user"></param>
+        /// <param name="shoppingCartItems"></param>
+        /// <returns></returns>
+        Order CreateOrderByItem(User user, List<ShoppingCartItem> shoppingCartItems);
         Order CreateOrder(User user, ShoppingCart shoppingCart);
 
         /// <summary>
