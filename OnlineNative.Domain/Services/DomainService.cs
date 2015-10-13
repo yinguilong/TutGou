@@ -106,7 +106,9 @@ namespace OnlineNative.Domain.Services
                     var orderItem = shoppingCartItem.CreateOrderItemByProductId();
                     orderItem.Order = order;
                     order.OrderItems.Add(orderItem);
-                    _shoppingCartItemRepository.Remove(shoppingCartItem);
+                    var item=_shoppingCartItemRepository.GetByExpression(x=>x.Id==shoppingCartItem.Id);
+                    if(item!=null)
+                    _shoppingCartItemRepository.Remove(item);
                 }
             }
             order.User = user;
@@ -116,6 +118,7 @@ namespace OnlineNative.Domain.Services
             return order;
             //var shoppingCartItems=shoppingCart.Id
         }
+        public Order CreateOr
         // 将指定的商品归类到指定的商品分类中。
         public ProductCategorization Categorize(NativeProduct product, Category category)
         {

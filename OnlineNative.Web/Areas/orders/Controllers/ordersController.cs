@@ -15,6 +15,10 @@ namespace OnlineNative.Web.Areas.orders.Controllers
         {
             return View();
         }
+        /// <summary>
+        /// 团购直接下单，待付款
+        /// </summary>
+        /// <returns></returns>
         public ActionResult CreateOrders()
         {
             return View();
