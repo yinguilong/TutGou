@@ -21,6 +21,7 @@ namespace OnlineNative.Model.Contracts
     public interface IOrderService
     {
 
+        OrderDto CreateOrderDirect(UserDto userDto, ProductDto productDto, int quantity);
         // 获得指定用户的购物车中商品数量
         int GetShoppingCartItemCount(Guid userId);
 

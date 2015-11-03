@@ -59,6 +59,7 @@ namespace OnlineNative.Web
                 string key = ReadonlyCollection.SERVERBEFOREKEY + sessionId;
                 var expiry = DateTime.Now.AddHours(6);
                 CacheHelper.Set(key, value, expiry);
+                var obj = CacheHelper.Get<CurrentUser>(key);
                 CacheHelper.Set(value.UserID.ToString(), key);
                 HttpContext.Current.Response.Cookies.Add(ReadonlyCollection.CLIENTSESSIONNAME, ReadonlyCollection.CLIENTSESSIONNAMECOOKIEVALUE, sessionId);
                 return sessionId;

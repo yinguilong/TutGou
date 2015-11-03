@@ -77,3 +77,4 @@ E:\GitHub\OnlineNative.Domain\OnlineNative.Infrastructure\bin\Debug\Microsoft.Pr
 E:\GitHub\OnlineNative.Domain\OnlineNative.Infrastructure\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
 E:\GitHub\OnlineNative.Domain\OnlineNative.Infrastructure\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.xml
 E:\GitHub\OnlineNative.Domain\OnlineNative.Infrastructure\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
+E:\GitHub\OnlineNative.Domain\OnlineNative.Infrastructure\obj\Debug\OnlineNative.Infrastructure.csprojResolveAssemblyReference.cache

@@ -8,6 +8,7 @@ using OnlineNative.Model.DTOs;
 using OnlineNative.Model.Contracts;
 using OnlineNative.Infrastructure;
 using OnlineNative.Infrastructure.Utils;
+using StackExchange.Helpers;
 namespace OnlineNative.Web.Areas.users.Controllers
 {
     public class usersController : BaseController
@@ -15,21 +16,23 @@ namespace OnlineNative.Web.Areas.users.Controllers
         //
         // GET: /users/users/
         private readonly IUserService _userServiceImp = ServiceLocator.Instance.GetService<IUserService>();
+        #region 我的账号首页加载
         public ActionResult Index()
         {
-            if (IsHaveAccount)
-            {
-                return RedirectToAction("UserLoginLoad");
-            }
-            else if (CurrentOperator != null)
+            if (CurrentOperator != null)
             {
                 return RedirectToAction("yonghuzhanghao");
+            }
+            else if (IsHaveAccount)
+            {
+                return RedirectToAction("UserLoginLoad");
             }
             else
             {
                 return RedirectToAction("UserCreateLoad");
             }
         }
+        #endregion
         #region 用户注册相关
         /// <summary>
         /// 用户注册加载页面
@@ -144,6 +147,15 @@ namespace OnlineNative.Web.Areas.users.Controllers
         {
             UserLogin(user);
             return Redirect("http://www.tutgou.com");
+        }
+        #endregion
+        #region 我的账号
+        [LoginAuthorize]
+        [Route("yonghuzhanghao")]
+        public ActionResult yonghuzhanghao()
+        {
+
+            return View("/Areas/users/Views/users/yonghuzhanghao.cshtml");
         }
         #endregion
     }

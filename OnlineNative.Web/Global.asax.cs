@@ -24,6 +24,7 @@ namespace OnlineNative.Web
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             log4net.Config.XmlConfigurator.Configure();
             AutoMapperConfig.MapperDTO();
+            CacheHelper.MemcachedPoolinitialize();
         }
     }
 }

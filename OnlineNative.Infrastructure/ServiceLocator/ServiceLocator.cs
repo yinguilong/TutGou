@@ -32,7 +32,10 @@ namespace OnlineNative.Infrastructure
     public class ServiceLocator : IServiceProvider
     {
         private readonly IUnityContainer _container;
-        private static ServiceLocator _instance = new ServiceLocator();
+        private static volatile ServiceLocator _instance = new ServiceLocator();
+        // // Lock对象，线程安全所用
+        private static object syncRoot = new object();
+
 
         private ServiceLocator()
         {
@@ -52,7 +55,18 @@ namespace OnlineNative.Infrastructure
 
         public static ServiceLocator Instance
         {
-            get { return _instance; }
+            get {
+                if (_instance == null)
+                {
+                    lock (syncRoot)
+                    {
+                        if (_instance == null)
+                            _instance = new ServiceLocator();
+                    }
+                }
+
+                return _instance;
+            }
         }
 
         #region Public Methods

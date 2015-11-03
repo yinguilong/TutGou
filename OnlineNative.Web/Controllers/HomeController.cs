@@ -16,5 +16,12 @@ namespace OnlineNative.Web.Controllers
         {
             return View("/Views/Home/Index_Fresh.cshtml");
         }
+        [Route("zhongzhuan")]
+        public ActionResult zhongzhuan(string note, string url)
+        {
+            ViewData["note"] = note;
+            ViewData["url"] = url;
+            return View("/Views/Home/zhongzhuan.cshtml");
+        }
     }
 }

@@ -11,6 +11,14 @@ namespace OnlineNative.Domain.Services
     public interface IDomainService
     {
         /// <summary>
+        /// 直接下单待付款
+        /// </summary>
+        /// <param name="user"></param>
+        /// <param name="product"></param>
+        /// <param name="count"></param>
+        /// <returns></returns>
+        Order CreateOrderDirect(User user, NativeProduct product, int count);
+        /// <summary>
         /// 创建订单
         /// </summary>
         /// <param name="user"></param>

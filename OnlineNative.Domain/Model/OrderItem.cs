@@ -25,7 +25,6 @@ namespace OnlineNative.Domain.Model
         #region IEnity Member
         public Guid Id { get; set; }
         #endregion
-
         public int Quantity { get; set; }
         public virtual NativeProduct Product { get; set; }
 

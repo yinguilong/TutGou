@@ -162,6 +162,17 @@ namespace OnlineNative.Service.ServiceImplementations
             var order = _domainService.CreateOrderByItem(user, list);
             return Mapper.Map<OrderDto>(order);
         }
+        public OrderDto CreateOrderDirect(UserDto userDto, ProductDto productDto, int quantity)
+        {
+            var user = _userRepository.GetByKey(new Guid(userDto.Id));
+            var product=_productRepository.GetByKey(new Guid(productDto.Id));
+            if (user!=null)
+            {
+                var order = _domainService.CreateOrderDirect(user, product,quantity);
+                return Mapper.Map<OrderDto>(order);
+            }
+            return null;
+        }
         public OrderDto GetOrder(Guid orderId)
         {
             var order = _orderRepository.GetBySpecification(new ExpressionSpecification<Order>(o => o.Id.Equals(orderId)), elp => elp.OrderItems);

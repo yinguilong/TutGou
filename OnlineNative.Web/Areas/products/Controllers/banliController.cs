@@ -16,6 +16,5 @@ namespace OnlineNative.Web.Areas.products.Controllers
             //这是为了测试git的修改
             return View("~/Areas/products/Views/banli/Index.cshtml");
         }
-
     }
 }

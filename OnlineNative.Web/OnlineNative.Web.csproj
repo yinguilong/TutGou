@@ -191,6 +191,7 @@
     <Compile Include="Areas\orders\Controllers\ordersController.cs" />
     <Compile Include="Areas\orders\ordersAreaRegistration.cs" />
     <Compile Include="Areas\products\Controllers\banliController.cs" />
+    <Compile Include="Areas\products\Controllers\limoController.cs" />
     <Compile Include="Areas\products\Controllers\productController.cs" />
     <Compile Include="Areas\products\productsAreaRegistration.cs" />
     <Compile Include="Areas\users\Controllers\usersController.cs" />
@@ -277,6 +278,8 @@
     <Content Include="Areas\users\Views\users\UserLoginLoad.cshtml" />
     <Content Include="Areas\users\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\products\Views\product\productaddload.cshtml" />
+    <Content Include="Areas\users\Views\users\yonghuzhanghao.cshtml" />
+    <Content Include="Areas\products\Views\limo\Index.cshtml" />
     <None Include="Scripts\jquery\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\fresh\jquery.chocolat.js" />
     <Content Include="Scripts\jquery\formValidator-4.1.1.js" />
@@ -374,6 +377,7 @@
     <Content Include="slider\fonts\flexslider-icon.woff" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Index_Fresh.cshtml" />
+    <Content Include="Views\Home\zhongzhuan.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

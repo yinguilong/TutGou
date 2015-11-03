@@ -31,6 +31,7 @@ namespace OnlineNative.Domain.Services
         private readonly IOrderRepository _orderRepository;
         private readonly IProductCategorizationRepository _productCategorizationRepository;
         private readonly IUserRoleRepository _userRoleRepository;
+        private readonly IProductRepository _productRepository;
         #endregion
 
         #region Ctor
@@ -50,6 +51,7 @@ namespace OnlineNative.Domain.Services
             _shoppingCartItemRepository = shoppingCartItemRepository;
             _productCategorizationRepository = productCategorizationRepository;
             _userRoleRepository = userRoleRepository;
+            _productRepository = productRepository;
         }
 
         #endregion
@@ -94,21 +96,21 @@ namespace OnlineNative.Domain.Services
         public Order CreateOrderByItem(User user, List<ShoppingCartItem> shoppingCartItems)
         {
             var order = new Order();
-            if (shoppingCartItems==null||!shoppingCartItems.Any())
+            if (shoppingCartItems == null || !shoppingCartItems.Any())
             {
                 throw new InvalidOperationException("购物篮中没有任何物品");
             }
             order.OrderItems = new List<OrderItem>();
             foreach (var shoppingCartItem in shoppingCartItems)
             {
-                if (shoppingCartItem!=null&&shoppingCartItem.Id!=null)
+                if (shoppingCartItem != null && shoppingCartItem.Id != null)
                 {
                     var orderItem = shoppingCartItem.CreateOrderItemByProductId();
                     orderItem.Order = order;
                     order.OrderItems.Add(orderItem);
-                    var item=_shoppingCartItemRepository.GetByExpression(x=>x.Id==shoppingCartItem.Id);
-                    if(item!=null)
-                    _shoppingCartItemRepository.Remove(item);
+                    var item = _shoppingCartItemRepository.GetByExpression(x => x.Id == shoppingCartItem.Id);
+                    if (item != null)
+                        _shoppingCartItemRepository.Remove(item);
                 }
             }
             order.User = user;
@@ -118,7 +120,34 @@ namespace OnlineNative.Domain.Services
             return order;
             //var shoppingCartItems=shoppingCart.Id
         }
-        public Order CreateOr
+        /// <summary>
+        /// 团购直接下单、待付款
+        /// </summary>
+        /// <param name="user"></param>
+        /// <param name="product"></param>
+        /// <param name="count"></param>
+        /// <returns></returns>
+        public Order CreateOrderDirect(User user, NativeProduct product, int count)
+        {
+            var order = new Order();
+            if (count == 0 || product == null)
+            {
+                throw new InvalidOperationException("没有任何商品购买");
+            }
+            order.OrderItems = new List<OrderItem>();
+            var orderItem = new OrderItem();
+            orderItem.Id = Guid.NewGuid();
+            orderItem.Product = product;
+            orderItem.Quantity = count;
+            orderItem.Order = order;
+            order.OrderItems.Add(orderItem);
+            order.User = user;
+            order.DeliveryAddress = user.DeliveryAddress;
+            order.Status = DictOrderStatus.创建;//先创建订单，付款需要用到订单号
+            _orderRepository.Add(order);
+            _repositoryContext.Commit();
+            return order;
+        }
         // 将指定的商品归类到指定的商品分类中。
         public ProductCategorization Categorize(NativeProduct product, Category category)
         {

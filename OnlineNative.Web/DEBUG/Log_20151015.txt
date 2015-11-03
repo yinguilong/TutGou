@@ -1,0 +1,24 @@
+
+异常时间：2015-10-15 14:49:18,102 [44] 
+异常级别：ERROR  
+异常类：OnlineNative.Logger [(null)]  
+Exception caught 
+ System.Data.Entity.Infrastructure.DbUpdateException: Null value for non-nullable member. Member: 'DeliveryAddress'. ---> System.Data.Entity.Core.UpdateException: Null value for non-nullable member. Member: 'DeliveryAddress'.
+   在 System.Data.Entity.Core.Mapping.Update.Internal.ExtractorMetadata.RetrieveMember(IEntityStateEntry stateEntry, IExtendedDataRecord record, Boolean useCurrentValues, EntityKey key, Int32 ordinal, ModifiedPropertiesBehavior modifiedPropertiesBehavior)
+   在 System.Data.Entity.Core.Mapping.Update.Internal.ExtractorMetadata.ExtractResultFromRecord(IEntityStateEntry stateEntry, Boolean isModified, IExtendedDataRecord record, Boolean useCurrentValues, UpdateTranslator translator, ModifiedPropertiesBehavior modifiedPropertiesBehavior)
+   在 System.Data.Entity.Core.Mapping.Update.Internal.RecordConverter.ConvertStateEntryToPropagatorResult(IEntityStateEntry stateEntry, Boolean useCurrentValues, ModifiedPropertiesBehavior modifiedPropertiesBehavior)
+   在 System.Data.Entity.Core.Mapping.Update.Internal.ExtractedStateEntry..ctor(UpdateTranslator translator, IEntityStateEntry stateEntry)
+   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.LoadStateEntry(IEntityStateEntry stateEntry)
+   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.PullModifiedEntriesFromStateManager()
+   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.ProduceCommands()
+   在 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   在 System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   在 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 OnlineNative.Repositories.EntityFramework.EntityFrameworkRepositoryContext.Commit() 位置 e:\GitHub\OnlineNative.Domain\OnlineNative.Repositories\EntityFramework\EntityFrameworkRepositoryContext.cs:行号 52
+   在 OnlineNative.Domain.Services.DomainService.CreateOrderDirect(User user, NativeProduct product, Int32 count) 位置 e:\GitHub\OnlineNative.Domain\OnlineNative.Domain\Services\DomainService.cs:行号 147
+   在 OnlineNative.Service.ServiceImplementations.OrderServiceImp.CreateOrderDirect(UserDto userDto, ProductDto productDto, Int32 quantity) 位置 e:\GitHub\OnlineNative.Domain\OnlineNative.Service\ServiceImplementations\OrderServiceImp.cs:行号 171
+   在 DynamicModule.ns.Wrapped_IOrderService_8ebdba8ccbc741aea225601c0b11a437.<CreateOrderDirect_DelegateImplementation>__0(IMethodInvocation inputs, GetNextInterceptionBehaviorDelegate getNext)
